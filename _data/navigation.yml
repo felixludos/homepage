@@ -5,13 +5,13 @@
 - title: "Research"
   url: "/research/"
   side: left
-  dropdown:
-  - title: "Motion-Nets"
-    url: "/research/motion-nets/"
-  - title: "Drop-in"
-    url: "/research/drop-in/"
-  - title: "Autoencoders"
-    url: "/research/autoencoders/"
+#  dropdown:
+#  - title: "Motion-Nets"
+#    url: "/research/motion-nets/"
+#  - title: "Drop-in"
+#    url: "/research/drop-in/"
+#  - title: "Autoencoders"
+#    url: "/research/autoencoders/"
 
 - title: "Publications"
   url: "/publications/"
@@ -23,13 +23,8 @@
   dropdown:
   - title: "Game-Set-Match"
     url: "/projects/gsm/"
-#    dropdown:
-#    - title: "Ready-Set-Go"
-#      url: "/projects/gsm/rsg/"
-#    - title: "GSM-Lang"
-#      url: "/projects/gsm/lang/"
-#    - title: "Interface"
-#      url: "/projects/gsm/interface"
+  - title: "Ludos.io"
+    url: "/projects/ludos/"
   - title: "Foundation"
     url: "/projects/foundation/"
   - title: "QC Intro"
@@ -43,11 +38,11 @@
   dropdown:
   - title: "Radical Ideas"
     url: "/ideas/radical/"
-  - title: "Representations"
-    url: "/ideas/representations/"
+#  - title: "Representations"
+#    url: "/ideas/representations/"
   - title: "Collective Decision Making"
     url: "/ideas/collective/"
-  - title: "Future Projects"
+#  - title: "Future Projects"
 
 
 - title: "Search"
