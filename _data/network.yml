@@ -10,10 +10,10 @@
   class: "page-link"
   title: "Source control on Github"
 
-- name: "Webpage design using feeling-responsive"
-  url: "https://phlow.github.io/feeling-responsive/"
-  class: "page-link"
-  title: "Webpage design using feeling-responsive"
+#- name: "Webpage design using feeling-responsive"
+#  url: "https://phlow.github.io/feeling-responsive/"
+#  class: "page-link"
+#  title: "Webpage design using feeling-responsive"
 
 - name: "Images by Unsplash"
   url: "http://unsplash.com/"
