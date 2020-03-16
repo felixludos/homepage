@@ -35,13 +35,13 @@
 - title: "Ideas"
   url: "/ideas/"
   side: left
-  dropdown:
-  - title: "Radical Ideas"
-    url: "/ideas/radical/"
+#  dropdown:
+#  - title: "Radical Ideas"
+#    url: "/ideas/radical/"
 #  - title: "Representations"
 #    url: "/ideas/representations/"
-  - title: "Collective Decision Making"
-    url: "/ideas/collective/"
+#  - title: "Collective Decision Making"
+#    url: "/ideas/collective/"
 #  - title: "Future Projects"
 
 
