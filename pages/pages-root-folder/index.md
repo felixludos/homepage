@@ -5,7 +5,7 @@
 # this work, you have to use › layout: frontpage
 #
 layout: frontpage
-title: "Personal Homepage for Felix Leeb"
+title: "Felix Leeb"
 subheadline: "Fighting Entropy one idea at a time"
 header:
   image_fullwidth: ideal_city.jpg
