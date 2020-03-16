@@ -26,12 +26,6 @@ widget3:
   image: 'widget-3.jpg'
   text: "Perhaps I have too much free time, but there's lots more I spend my time on."
 
-#widget2:
-#  title: "Where is my work?"
-#  url: '/publications/'
-#  text: 'Occasionally, my work ends up being worth publishing in more traditional media.'
-#  image: 'widget-2.jpg'
-
 #
 # Use the call for action to show a button on the frontpage
 #
@@ -61,3 +55,12 @@ homepage: true
 #  <a class="close-reveal-modal">&#215;</a>
 #</div>
 ---
+
+# News
+
+- September 2019 - I joined the Empirical Inference group at the Max Planck Institute for Intelligent Systems to complete my PhD.
+- June 2019 - I completed my M.S. in Computer Science at the University of Washington under Dieter Fox.
+- March 2019 - I completed my B.S. in Computer Science, Physics, and Chemistry at the University of Washington.
+
+
+
