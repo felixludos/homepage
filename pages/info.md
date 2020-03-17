@@ -17,7 +17,7 @@ Currently, I am working at the Max Planck Institute as a PhD student under the s
 
 ## Curriculum Vitae
 
-Here is my most recent CV. Unfortunately, it hasn't been updated since late 2018.
+Here is my most recent CV, which was updated in early 2020.
 
 <embed src="../files/cv.pdf" type="application/pdf" width="100%" height="600px" />
 
