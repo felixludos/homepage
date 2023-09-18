@@ -3,84 +3,122 @@ const contentEl = document.getElementById('content');
 // const grayMatter = window.grayMatter || matter;
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Event listener for navigation links
-    document.querySelectorAll('nav a').forEach(link => {
+    // No need to preventDefault anymore since we're using URI fragments
+    document.querySelectorAll('nav a, header h1 a').forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
             loadPage(e.target.dataset.page);
         });
     });
 
-    // Load default page
-    loadPage('home');
+    // Load the correct page based on the URL's fragment
+    const initialPage = window.location.hash.slice(1) || 'home';
+    loadPage(initialPage);
+
+    // Listen for hash changes to update the content
+    window.addEventListener('hashchange', function() {
+        const page = window.location.hash.slice(1);
+        // loadPage(page);
+    });
 });
 
-
-function loadPage(page, projectTitle) {
+function loadPage(page) {
+    console.log(`Loading page: ${page}`);
+    // const [gallery, projectTitle] = page.split('-');
     switch(page) {
         case 'home':
-            contentEl.innerHTML = '<h2>Welcome to my portfolio</h2>';
+        case '':
+            contentEl.innerHTML = '<h2>Home</h2>';
             break;
-        case 'projects':
-            loadProjectsGallery();
-            break;
-        case 'project':
-            loadProjectPage(projectTitle);
-            break;
-        case 'about':
-            contentEl.innerHTML = '<h2>About Me</h2>';
-            break;
+        // case gallery:
+        //     loadProjectPage(gallery, projectTitle);
+        //     break;
+        default:
+            contentEl.innerHTML = `<h2>${page}</h2>`;
+            loadGallery(page);
     }
 }
 
-function loadProjectsGallery() {
+function loadGallery(gallery) {
     // Fetch the list of markdown files from projects.json
-    fetch('projects.json')
+    console.log(`Loading gallery: ${gallery}`);
+    fetch(`${gallery}/_info.json`)
         .then(response => response.json())
-        .then(files => {
-            files.forEach(file => {
-                fetch(`projects/${file}`)
+        .then(cards => {
+            const promises = cards.map(entry => {
+                return fetch(`${gallery}/${entry}`)
                     .then(response => response.text())
                     .then(content => {
-                        const frontMatter = extractFrontMatter(content);
-                        const markdownContent = removeFrontMatter(content); // Remove front matter from content
-                        const renderedContent = marked(markdownContent); // Use marked to render the markdown
-                        // console.log(frontMatter)
-                        if (markdownContent) {
-                            // If the markdown file has content, display it
-                            addProjectToGallery(frontMatter, renderedContent);
-                        } else if (frontMatter.repo) {
-                            // If there's an associated GitHub repo, fetch the README
-                            const [username, repoName] = frontMatter.repo.split('/');
-                            fetchGitHubReadme(username, repoName, frontMatter);
-                        }
+                        addProjectToGallery(gallery, entry, content);
                     });
+            });
+            
+            // Wait for all projects to be loaded
+            Promise.all(promises).then(() => {
+                bindViewMoreLinks();
             });
         });
 }
 
-function addProjectToGallery(frontMatter, content) {
+function bindViewMoreLinks() {
+    // Adding the event listener for 'View More' links
+    contentEl.querySelectorAll('.project-card .view-more').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            loadProjectPage(e.target.dataset.gallery, e.target.dataset.entry);
+        });
+    });
+}
+
+function loadProjectPage(gallery, entry) {
+    fetch(`${gallery}/${entry}`)
+        .then(response => response.text())
+        .then(content => {
+            const frontMatter = extractFrontMatter(content);
+            let markdownContent = removeFrontMatter(content);
+
+            if (markdownContent) {
+                // If the markdown file has content, render it
+                contentEl.innerHTML = marked(markdownContent);
+            } else if (frontMatter.repo) {
+                // If there's an associated GitHub repo, fetch the README
+                const [username, repoName] = frontMatter.repo.split('/');
+                fetchGitHubReadme(username, repoName)
+                    .then(readme => {
+                        contentEl.innerHTML = marked(readme);
+                    });
+            } else {
+                // If there's no repo or markdown content, display the front matter
+                let formattedFrontMatter = "<div class='front-matter'>";
+                for (let key in frontMatter) {
+                    formattedFrontMatter += `<p><strong>${key}:</strong> ${frontMatter[key]}</p>`;
+                }
+                formattedFrontMatter += "</div>";
+                contentEl.innerHTML = formattedFrontMatter;
+            }
+        });
+}
+
+function fetchGitHubReadme(username, repoName) {
+    const apiUrl = `https://api.github.com/repos/${username}/${repoName}/readme`;
+    return fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            return atob(data.content); // Decode base64 content
+        });
+}
+
+function addProjectToGallery(gallery, entry, content) {
+    const frontMatter = extractFrontMatter(content);
     const projectHtml = `
         <div class="project-card">
             <h3>${frontMatter.title}</h3>
             <p>Author: ${frontMatter.author}</p>
             <p>Date: ${frontMatter.date}</p>
-            <div class="description">${content}</div>
+            <!-- Add a 'View More' link to navigate to detailed content -->
+            <a href="#" class="view-more" data-gallery="${gallery}" data-entry="${entry}">View More</a>
         </div>
     `;
     contentEl.innerHTML += projectHtml;
-}
-
-function fetchGitHubReadme(username, repoName, frontMatter) {
-    const apiUrl = `https://api.github.com/repos/${username}/${repoName}/readme`;
-
-    fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-            const readmeContent = atob(data.content); // Decode base64 content
-            const renderedReadme = marked(readmeContent); // Render the markdown
-            addProjectToGallery(frontMatter, renderedReadme);
-        });
 }
 
 function extractFrontMatter(markdown) {
