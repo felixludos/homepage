@@ -1,62 +1,90 @@
-
 const contentEl = document.getElementById('content');
-// const grayMatter = window.grayMatter || matter;
 
 document.addEventListener('DOMContentLoaded', function() {
-    // No need to preventDefault anymore since we're using URI fragments
-    document.querySelectorAll('nav a, header h1 a').forEach(link => {
-        link.addEventListener('click', function(e) {
-            loadPage(e.target.dataset.page);
+    function initializeSite(data) {
+        // Store the data in a global variable or pass to another function
+        window.siteStructure = data;
+
+        // Load the correct page based on the URL's fragment
+        const initialPage = window.location.hash.slice(1) || 'home';
+        loadPage(initialPage);
+
+        // Listen for hash changes to update the content
+        window.addEventListener('hashchange', function() {
+            const page = window.location.hash.slice(1);
+            loadPage(page);
         });
-    });
+    }
 
-    // Load the correct page based on the URL's fragment
-    const initialPage = window.location.hash.slice(1) || 'home';
-    loadPage(initialPage);
-
-    // Listen for hash changes to update the content
-    window.addEventListener('hashchange', function() {
-        const page = window.location.hash.slice(1);
-        // loadPage(page);
-    });
+    fetch('content/_toc.yaml')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(yamlText => {
+            // Parse the YAML content
+            const data = jsyaml.load(yamlText);
+            
+            // Call the initialization function
+            initializeSite(data);
+        })
+        .catch(error => {
+            console.log('There was a problem with the fetch operation:', error.message);
+        });
 });
 
 function loadPage(page) {
     console.log(`Loading page: ${page}`);
-    // const [gallery, projectTitle] = page.split('-');
-    switch(page) {
-        case 'home':
-        case '':
-            contentEl.innerHTML = '<h2>Home</h2>';
-            break;
-        // case gallery:
-        //     loadProjectPage(gallery, projectTitle);
-        //     break;
-        default:
-            contentEl.innerHTML = `<h2>${page}</h2>`;
-            loadGallery(page);
+
+    contentEl.innerHTML = ''; // Clear the content area
+    
+    if (page.includes('-')) {
+        // If there's a hyphen, then it's a combination of gallery and project title
+        const [gallery, projectTitle] = page.split('-');
+        loadProjectPage(gallery, projectTitle);
+    } else if (window.siteStructure && page in window.siteStructure) {
+        const page_type = window.siteStructure[page].type;
+        switch (page_type) {
+            case 'gallery':
+                loadGallery(page);
+                break;
+            default:
+                console.log(`Unknown page type: ${page_type}`);
+        }
+    } else {
+        console.log(`defaulting to home page: ${page}`);
+
+        // load (default) home page
+        contentEl.innerHTML = '<h2>Default Home</h2>';
     }
 }
 
 function loadGallery(gallery) {
-    // Fetch the list of markdown files from projects.json
+    // Access the list of posts from the loaded site structure
     console.log(`Loading gallery: ${gallery}`);
-    fetch(`${gallery}/_info.json`)
-        .then(response => response.json())
-        .then(cards => {
-            const promises = cards.map(entry => {
-                return fetch(`${gallery}/${entry}`)
-                    .then(response => response.text())
-                    .then(content => {
-                        addProjectToGallery(gallery, entry, content);
-                    });
+
+    const info = window.siteStructure[gallery];
+
+    // If info doesn't exist for the gallery, handle the error
+    if (!info || !info.posts || info.posts.length === 0) {
+        console.error(`No posts data found for gallery: ${gallery}`);
+        contentEl.innerHTML = '<h2>No posts found.</h2>';  // display the message in the content area
+        return;
+    }
+
+    const promises = Object.keys(info.posts).map(key => {
+        return fetchProjectContent(gallery, key)
+            .then(content => {
+                addProjectToGallery(gallery, key, content);
             });
-            
-            // Wait for all projects to be loaded
-            Promise.all(promises).then(() => {
-                bindViewMoreLinks();
-            });
-        });
+    });
+
+    // Wait for all projects to be loaded
+    Promise.all(promises).then(() => {
+        bindViewMoreLinks();
+    });
 }
 
 function bindViewMoreLinks() {
@@ -64,14 +92,19 @@ function bindViewMoreLinks() {
     contentEl.querySelectorAll('.project-card .view-more').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            loadProjectPage(e.target.dataset.gallery, e.target.dataset.entry);
+            
+            const gallery = e.target.dataset.gallery;
+            const entry = e.target.dataset.entry;
+            
+            // Change the hash of the site, triggering the hashchange event
+            window.location.hash = `${gallery}-${entry}`;
         });
     });
 }
 
 function loadProjectPage(gallery, entry) {
-    fetch(`${gallery}/${entry}`)
-        .then(response => response.text())
+    // const info = window.siteStructure[gallery].posts[entry];
+    fetchProjectContent(gallery, entry)
         .then(content => {
             const frontMatter = extractFrontMatter(content);
             let markdownContent = removeFrontMatter(content);
@@ -96,6 +129,15 @@ function loadProjectPage(gallery, entry) {
                 contentEl.innerHTML = formattedFrontMatter;
             }
         });
+}
+
+function fetchProjectContent(gallery, key) {
+    const info = window.siteStructure[gallery].posts[key];
+    const fileNameBase = info.filename || key;
+    const fileExtension = info.ext || '.md';
+    const filePath = `content/${gallery}/${fileNameBase}${fileExtension}`;
+
+    return fetch(filePath).then(response => response.text());
 }
 
 function fetchGitHubReadme(username, repoName) {

@@ -1,0 +1,25 @@
+{
+    "interests": 
+    {
+        "type": "gallery",
+
+        "posts": []
+    },
+    "research": 
+    {
+        "type": "gallery",
+
+        "posts": []
+    },
+    "projects": 
+    {
+        "type": "gallery",
+
+        "posts": 
+        [
+            "latentstates.md",
+            "omnifig.md",
+            "omnibelt.md"
+        ]
+    }
+}

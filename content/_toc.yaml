@@ -1,0 +1,15 @@
+research:
+  type: gallery
+  title: Research
+
+projects:
+  type: gallery
+  title: Projects
+  posts:
+    latentstates: {}
+    omnibelt: {}
+    omnifig: {}
+
+interests:
+  type: gallery
+  title: Interests
