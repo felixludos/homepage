@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Your Portfolio</title>
+        <link rel="stylesheet" href="styles.css">
+        
+        <script src="https://cdn.jsdelivr.net/npm/marked@3.0.8/marked.min.js"></script>
+        
+        <!-- This works (but is currently not needed) -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script> -->
+    </head>
+<body>
+    <header>
+        <h1><a href="#" data-page="home">Felix Leeb</a></h1> <!-- Added link to start page -->
+        <nav>
+            <a href="#research" data-page="research">Research</a> <!-- Added href -->
+            <a href="#projects" data-page="projects">Projects</a> <!-- Added href -->
+            <a href="#interests" data-page="interests">Interests</a> <!-- Added href -->
+        </nav>
+    </header>
+
+
+    <main id="content">
+        <!-- Content will be loaded here dynamically -->
+        <div id="project-gallery">
+            <!-- Project cards will be dynamically loaded here -->
+        </div>
+        <!-- Inside the <main> tag -->
+        <div id="project-details">
+            <!-- Project details will be dynamically loaded here -->
+        </div>
+
+    </main>
+
+    <footer>
+        © 2023 Felix Leeb
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
