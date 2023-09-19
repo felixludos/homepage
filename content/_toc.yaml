@@ -1,6 +1,8 @@
 research:
   type: gallery
   title: Research
+  posts:
+    latent_responses: {}
 
 projects:
   type: gallery
@@ -13,3 +15,5 @@ projects:
 interests:
   type: gallery
   title: Interests
+  posts:
+    games: {}

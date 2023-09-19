@@ -1,6 +1,14 @@
 const contentEl = document.getElementById('content');
 
+const fadeInElements = document.querySelectorAll('.fade-in');
+
 document.addEventListener('DOMContentLoaded', function() {
+    fadeInElements.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add('active');
+        }
+    });
+
     function initializeSite(data) {
         // Store the data in a global variable or pass to another function
         window.siteStructure = data;
@@ -14,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const page = window.location.hash.slice(1);
             loadPage(page);
         });
+
     }
 
     fetch('content/_toc.yaml')
@@ -192,4 +201,20 @@ function removeFrontMatter(markdown) {
     return markdown.replace(frontMatterRegex, "");
 }
 
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
 
+window.addEventListener('scroll', () => {
+    fadeInElements.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add('active');
+        }
+    });
+});
