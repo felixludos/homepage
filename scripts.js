@@ -142,6 +142,8 @@ function loadGallery(gallery) {
         return;
     }
 
+    loadSimplePage(gallery)
+
     const promises = Object.keys(info.posts).map(key => {
         return fetchProjectContent(gallery, key)
             .then(content => {

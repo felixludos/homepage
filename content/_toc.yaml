@@ -4,16 +4,24 @@ research:
   posts:
     latent_responses: {}
 
-projects:
+software:
   type: gallery
-  title: Projects
+  title: Software
   posts:
     latentstates: {}
     omnibelt: {}
     omnifig: {}
 
-interests:
+games:
   type: gallery
-  title: Interests
+  title: Games
   posts:
-    games: {}
+    a_lhonneur: {}
+    aristocracy: {}
+
+essays:
+  type: gallery
+  title: Essays
+  posts:
+    pragmatism: {}
+    apocalypse: {}
