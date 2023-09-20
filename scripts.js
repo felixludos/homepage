@@ -1,6 +1,26 @@
 const contentEl = document.getElementById('content');
 
+const fadeInElements = document.querySelectorAll('.fade-in');
+
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', function() {
+        const gallery = e.target.dataset.gallery;
+        const entry = e.target.dataset.entry;
+
+        console.log(`Loading project: ${gallery}-${entry}`)
+
+        // Change the hash of the site, triggering the hashchange event
+        window.location.hash = `${gallery}-${entry}`;
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
+    fadeInElements.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add('active');
+        }
+    });
+
     function initializeSite(data) {
         // Store the data in a global variable or pass to another function
         window.siteStructure = data;
@@ -14,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const page = window.location.hash.slice(1);
             loadPage(page);
         });
+
     }
 
     fetch('content/_toc.yaml')
@@ -50,15 +71,62 @@ function loadPage(page) {
             case 'gallery':
                 loadGallery(page);
                 break;
+            case 'simple':
+                loadSimplePage(page);
+                break;
             default:
                 console.log(`Unknown page type: ${page_type}`);
         }
     } else {
-        console.log(`defaulting to home page: ${page}`);
-
-        // load (default) home page
-        contentEl.innerHTML = '<h2>Default Home</h2>';
+        loadHomePage();
     }
+}
+
+function loadHomePage() {
+    console.log(`defaulting to home page`);
+
+    // Fetch the greetings and sample a single random greeting
+    fetch('greetings.json')
+        .then(response => response.json())
+        .then(greetings => {
+            if (!greetings || !Array.isArray(greetings) || greetings.length === 0) {
+                console.error("Invalid greetings data");
+                return;
+            }
+
+            const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+
+            // Load the home page markdown content and replace the pattern
+            loadSimplePageWithGreeting('home', randomGreeting); // Assuming 'home' is the name of the home page in your site structure
+        })
+        .catch(error => console.error('Error fetching greetings:', error));
+}
+
+function loadSimplePageWithGreeting(page, greeting) {
+    const info = window.siteStructure[page] || {};
+    const fileNameBase = info.filename || page;
+    const fileExtension = info.ext || '.md';
+    const filePath = `content/${fileNameBase}${fileExtension}`;
+
+    fetch(filePath)
+        .then(response => response.text())
+        .then(content => {
+            content = content.replace(/\{greeting\}/g, greeting); // Replace the {greeting} pattern
+            contentEl.innerHTML = marked(content);
+        });
+}
+
+function loadSimplePage(page) {
+    const info = window.siteStructure[page] || {};
+    const fileNameBase = info.filename || page;
+    const fileExtension = info.ext || '.md';
+    const filePath = `content/${fileNameBase}${fileExtension}`;
+
+    fetch(filePath)
+        .then(response => response.text())
+        .then(content => {
+            contentEl.innerHTML = marked(content);
+        });
 }
 
 function loadGallery(gallery) {
@@ -79,26 +147,6 @@ function loadGallery(gallery) {
             .then(content => {
                 addProjectToGallery(gallery, key, content);
             });
-    });
-
-    // Wait for all projects to be loaded
-    Promise.all(promises).then(() => {
-        bindViewMoreLinks();
-    });
-}
-
-function bindViewMoreLinks() {
-    // Adding the event listener for 'View More' links
-    contentEl.querySelectorAll('.project-card .view-more').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const gallery = e.target.dataset.gallery;
-            const entry = e.target.dataset.entry;
-            
-            // Change the hash of the site, triggering the hashchange event
-            window.location.hash = `${gallery}-${entry}`;
-        });
     });
 }
 
@@ -131,9 +179,9 @@ function loadProjectPage(gallery, entry) {
         });
 }
 
-function fetchProjectContent(gallery, key) {
-    const info = window.siteStructure[gallery].posts[key];
-    const fileNameBase = info.filename || key;
+function fetchProjectContent(gallery, entry) {
+    const info = window.siteStructure[gallery].posts[entry];
+    const fileNameBase = info.filename || entry;
     const fileExtension = info.ext || '.md';
     const filePath = `content/${gallery}/${fileNameBase}${fileExtension}`;
 
@@ -152,13 +200,13 @@ function fetchGitHubReadme(username, repoName) {
 function addProjectToGallery(gallery, entry, content) {
     const frontMatter = extractFrontMatter(content);
     const projectHtml = `
+    <a href="#${gallery}-${entry}" class="card-link">
         <div class="project-card">
             <h3>${frontMatter.title}</h3>
             <p>Author: ${frontMatter.author}</p>
             <p>Date: ${frontMatter.date}</p>
-            <!-- Add a 'View More' link to navigate to detailed content -->
-            <a href="#" class="view-more" data-gallery="${gallery}" data-entry="${entry}">View More</a>
         </div>
+    </a>
     `;
     contentEl.innerHTML += projectHtml;
 }
@@ -192,4 +240,20 @@ function removeFrontMatter(markdown) {
     return markdown.replace(frontMatterRegex, "");
 }
 
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
 
+window.addEventListener('scroll', () => {
+    fadeInElements.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add('active');
+        }
+    });
+});

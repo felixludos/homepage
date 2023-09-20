@@ -5,39 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Your Portfolio</title>
         <link rel="stylesheet" href="styles.css">
+
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/latin-modern/2.004.5/web-fonts/lm_serif_regular_macroman/lm_serif_regular_macroman.woff"> -->
         
         <script src="https://cdn.jsdelivr.net/npm/marked@3.0.8/marked.min.js"></script>
-        
-        <!-- This works (but is currently not needed) -->
         <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
     </head>
-<body>
-    <header>
-        <h1><a href="#" data-page="home">Felix Leeb</a></h1> <!-- Added link to start page -->
-        <nav>
-            <a href="#research" data-page="research">Research</a> <!-- Added href -->
-            <a href="#projects" data-page="projects">Projects</a> <!-- Added href -->
-            <a href="#interests" data-page="interests">Interests</a> <!-- Added href -->
-        </nav>
-    </header>
+    <body>
+        <div class="content-container">
+            <header>
+                <!-- <h1><a href="#" data-page="home">Felix Leeb</a></h1> -->
+                    <!-- <a href="#" data-page="home">Home</a> -->
+                <nav>
+                    <a href="#research" data-page="research">research</a>
+                    <a href="#projects" data-page="projects">projects</a>
+                    <a href="#interests" data-page="interests">interests</a>
+                </nav>
+            </header>
 
+            <main id="content"></main>
 
-    <main id="content">
-        <!-- Content will be loaded here dynamically -->
-        <div id="project-gallery">
-            <!-- Project cards will be dynamically loaded here -->
+            <footer>
+                © 2023 <a href="/" title="Go to Home Page">Felix Leeb</a>
+            </footer>
         </div>
-        <!-- Inside the <main> tag -->
-        <div id="project-details">
-            <!-- Project details will be dynamically loaded here -->
-        </div>
-
-    </main>
-
-    <footer>
-        © 2023 Felix Leeb
-    </footer>
-
-    <script src="scripts.js"></script>
-</body>
+        <script src="scripts.js"></script>
+    </body>
 </html>
