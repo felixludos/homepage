@@ -200,17 +200,66 @@ function fetchGitHubReadme(username, repoName) {
 }
 
 function addProjectToGallery(gallery, entry, content) {
+    const info = window.siteStructure[gallery].posts[entry];
     const frontMatter = extractFrontMatter(content);
+    Object.assign(info, frontMatter);
+
+    // const arxiv = `assets/arxiv.svg`;
+
+    const coverImage = info.cover ? `<div class="card-cover" style="background-image: url('${info.cover}');"></div>` : '';
+    const emoji = info.emoji ? `<span>${info.emoji}</span>` : '';
+
+    const description = info.description ? `<p class="card-description">${info.description}</p>` : '';
+    const date = info.date ? `<span class="card-date">${info.date}</span>` : '';
+
+    let links = `<a href="#${gallery}" class="icon-link" id="shareLink" data-link="https://felixludos.com/#${gallery}-${entry}">
+    <i class="fas fa-share-alt"></i></a>`;
+    if (info.repo) {
+        links += `<a href="https://github.com/${info.repo}" target="_blank" class="card-icon">
+        <i class="fab fa-github"></i></a>`;
+    }
+    if (info.arxiv) {
+        links += `<a href="https://arxiv.org/abs/${info.arxiv}" target="_blank" class="card-icon">
+        <i class="fas fa-book-open"></i></a>`;
+    }
+
     const projectHtml = `
     <a href="#${gallery}-${entry}" class="card-link">
-        <div class="project-card">
-            <h3>${frontMatter.title}</h3>
-            <p>Author: ${frontMatter.author}</p>
-            <p>Date: ${frontMatter.date}</p>
+        <div class="card">
+            <!-- Left Content -->
+            <div class="card-content">
+                <div class="card-header">
+                    ${emoji}
+                    <h2 class="card-title">${info.title}</h2>
+                </div>
+                ${description}
+                <div class="card-footer">
+                    ${links}
+                    ${date}
+                </div>
+            </div>
+            <!-- Right Content -->
+            ${coverImage}
         </div>
     </a>
     `;
     contentEl.innerHTML += projectHtml;
+
+    const shareLinkElements = document.querySelectorAll('.icon-link#shareLink');
+    shareLinkElements.forEach(function(shareLinkElement) {
+        shareLinkElement.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevents the default anchor behavior
+            const projectLink = this.getAttribute('data-link');
+
+            // Use the Clipboard API to write the link to the clipboard
+            navigator.clipboard.writeText(projectLink).then(function() {
+                // console.log('Link copied to clipboard successfully!');
+                showNotification();
+            }).catch(function(err) {
+                console.error('Failed to copy link: ', err);
+            });
+        });
+    });
 }
 
 function extractFrontMatter(markdown) {
@@ -259,3 +308,12 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+function showNotification() {
+    const notificationElement = document.getElementById('notification');
+    notificationElement.classList.add('active');
+
+    setTimeout(() => {
+        notificationElement.classList.remove('active');
+    }, 2000);
+}
