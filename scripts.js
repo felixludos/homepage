@@ -21,6 +21,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    let storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", storedTheme);
+    
+    // Update the toggle function to store preference
+    document.getElementById("darkModeToggle").addEventListener("click", function() {
+        let currentTheme = document.documentElement.getAttribute("data-theme");
+        let newTheme = currentTheme === "dark" ? "light" : "dark";
+        console.log(`Switching theme from ${currentTheme} to ${newTheme}`)
+        document.documentElement.setAttribute("data-theme", newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+
     function initializeSite(data) {
         // Store the data in a global variable or pass to another function
         window.siteStructure = data;
@@ -85,6 +97,10 @@ function loadPage(page) {
 function loadHomePage() {
     console.log(`defaulting to home page`);
 
+    const info = window.siteStructure.home || {};
+    const coverimage = info.cover ? info.cover : 'assets/ideal_city.jpg';
+    document.getElementById('project-header').style.backgroundImage = `url('${coverimage}')`;
+
     // Fetch the greetings and sample a single random greeting
     fetch('greetings.json')
         .then(response => response.json())
@@ -122,6 +138,9 @@ function loadSimplePage(page) {
     const fileExtension = info.ext || '.md';
     const filePath = `content/${fileNameBase}${fileExtension}`;
 
+    const coverimage = info.cover ? info.cover : 'assets/ideal_city.jpg';
+    document.getElementById('project-header').style.backgroundImage = `url('${coverimage}')`;
+
     fetch(filePath)
         .then(response => response.text())
         .then(content => {
@@ -135,6 +154,9 @@ function loadGallery(gallery) {
 
     const info = window.siteStructure[gallery];
 
+    const coverimage = info.cover ? info.cover : 'assets/ideal_city.jpg';
+    document.getElementById('project-header').style.backgroundImage = `url('${coverimage}')`;
+
     // If info doesn't exist for the gallery, handle the error
     if (!info || !info.posts || info.posts.length === 0) {
         console.error(`No posts data found for gallery: ${gallery}`);
@@ -144,40 +166,137 @@ function loadGallery(gallery) {
 
     loadSimplePage(gallery)
 
-    const promises = Object.keys(info.posts).map(key => {
-        return fetchProjectContent(gallery, key)
-            .then(content => {
-                addProjectToGallery(gallery, key, content);
-            });
+    // Sort keys by date
+    const sortedKeys = Object.keys(info.posts).sort((a, b) => {
+        const entryA = info.posts[a];
+        const entryB = info.posts[b];
+        if (!entryA.order || !entryB.order) {
+            return a.localeCompare(b);
+        }
+        return entryA.order - entryB.order; // Sort in ascending order
+        // if (!entryA.date || !entryB.date) {
+        //     return a.localeCompare(b);
+        // }
+        // const dateA = new Date(entryA.date);
+        // const dateB = new Date(entryB.date);
+        // return dateB - dateA; // Sort in descending order
     });
+    
+    const promises = sortedKeys.map(key => {
+        return fetchProjectContent(gallery, key)
+        .then(content => {
+            addProjectToGallery(gallery, key, content);
+        });
+    });
+    // const promises = Object.keys(info.posts).map(key => {
+    //     return fetchProjectContent(gallery, key)
+    //         .then(content => {
+    //             addProjectToGallery(gallery, key, content);
+    //         });
+    // });
 }
 
 function loadProjectPage(gallery, entry) {
     // const info = window.siteStructure[gallery].posts[entry];
     fetchProjectContent(gallery, entry)
         .then(content => {
+            const info = window.siteStructure[gallery].posts[entry];
             const frontMatter = extractFrontMatter(content);
-            let markdownContent = removeFrontMatter(content);
+            Object.assign(info, frontMatter);
+            const markdownContent = removeFrontMatter(content);
+            
+            const coverimage = info.cover ? info.cover : 'assets/ideal_city.jpg';
+            document.getElementById('project-header').style.backgroundImage = `url('${coverimage}')`;
+
+            const emoji = info.emoji ? `<span class="project-page-emoji">${info.emoji}</span>` : '';
+            let fmtdate = '';
+            if (info.date) {
+                const dateObj = new Date(info.date);
+                if (dateObj.toString() === "Invalid Date") {
+                    fmtdate = info.date;
+                } else {
+                    fmtdate = dateObj.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+                }
+            } else if (info.raw_date) {
+                fmtdate = info.raw_date;
+            }
+            const date = fmtdate ? `<p class="project-page-date">${fmtdate}</span>` : '';
+            if (!info.updated) {
+                getLastEditDate(`content/${gallery}/${entry}.md`)
+                    .then(updated => (new Date(updated)).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }))
+                    .then(updated => {
+                        info.updated = updated;
+                        const updateddate = info.updated ? `<span class="project-page-date">(Last Edited: ${updated})</span>` : '';
+                        document.getElementById('project-page-dates').innerHTML = `${date}${updateddate}`;
+                    });
+            }
+            const updateddate = info.updated ? `<span class="project-page-date">(Last Edited: ${info.updated})</span>` : '';
+        
+            let links = `<a href="#${gallery}-${entry}" class="share-link" id="shareLink" data-link="https://felixludos.com/#${gallery}-${entry}">
+            <i class="fas fa-share-alt"></i></a>`;
+            if (info.repo) {
+                links += `<a href="https://github.com/${info.repo}" target="_blank" class="project-page-icon">
+                <i class="fab fa-github"></i></a>`;
+            }
+            if (info.arxiv) {
+                links += `<a href="https://arxiv.org/abs/${info.arxiv}" target="_blank" class="project-page-icon">
+                <i class="fas fa-book-open"></i></a>`;
+            } // <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3.842 0a1.004 1.004 0 0 0-.922.608c-.153.369-.044.627.294 1.111l6.919 8.36l-1.023 1.106a1.04 1.04 0 0 0 .003 1.423l1.23 1.313l-5.44 6.444c-.28.3-.453.823-.297 1.199a1.025 1.025 0 0 0 .959.635a.913.913 0 0 0 .689-.34l5.783-6.126l7.49 8.005a.853.853 0 0 0 .684.26a.958.958 0 0 0 .877-.615c.158-.377-.017-.75-.306-1.14L13.73 13.9l1.064-1.13a.963.963 0 0 0 .009-1.317L4.633.465S4.26.01 3.867 0zm0 .272h.017c.218.005.487.272.564.364l.005.006l.005.005l10.17 10.99a.692.692 0 0 1-.008.946l-1.066 1.133l-1.498-1.772l-8.6-10.39c-.328-.472-.352-.619-.26-.841a.73.73 0 0 1 .671-.44Zm14.341 1.57a.877.877 0 0 0-.655.242l-5.696 6.158l1.694 1.832l5.309-6.514c.325-.433.479-.66.325-1.029a1.12 1.12 0 0 0-.977-.689zm-7.655 12.282l1.318 1.414l-5.786 6.13a.65.65 0 0 1-.496.26a.752.752 0 0 1-.706-.467c-.112-.269.036-.687.244-.909l.005-.005l.005-.006z"/></svg>
+            const projectHtml = `
+            <div class="project-page-header">
+                <div class="project-page-title">
+                    ${emoji}
+                    <h1 class="project-page-title-text">${info.title}</h1>
+                </div>
+                <div class="project-page-links">
+                    <div>
+                        ${links}
+                    </div>
+                    <div id="project-page-dates">
+                        ${date}
+                        ${updateddate}
+                    </div>
+                </div>
+            </div>
+            `;
+            contentEl.innerHTML += projectHtml;
 
             if (markdownContent) {
                 // If the markdown file has content, render it
-                contentEl.innerHTML = marked(markdownContent);
-            } else if (frontMatter.repo) {
-                // If there's an associated GitHub repo, fetch the README
-                const [username, repoName] = frontMatter.repo.split('/');
-                fetchGitHubReadme(username, repoName)
-                    .then(readme => {
-                        contentEl.innerHTML = marked(readme);
-                    });
+                contentEl.innerHTML += marked(markdownContent);
+            // } else if (info.repo) {
+            //     // If there's an associated GitHub repo, fetch the README
+            //     const [username, repoName] = info.repo.split('/');
+            //     fetchGitHubReadme(username, repoName)
+            //         .then(readme => {
+            //             contentEl.innerHTML = marked(readme);
+            //         });
             } else {
                 // If there's no repo or markdown content, display the front matter
-                let formattedFrontMatter = "<div class='front-matter'>";
-                for (let key in frontMatter) {
-                    formattedFrontMatter += `<p><strong>${key}:</strong> ${frontMatter[key]}</p>`;
-                }
-                formattedFrontMatter += "</div>";
-                contentEl.innerHTML = formattedFrontMatter;
+                // let formattedFrontMatter = "<div class='front-matter'>";
+                // for (let key in info) {
+                //     formattedFrontMatter += `<p><strong>${key}:</strong> ${info[key]}</p>`;
+                // }
+                // formattedFrontMatter += "</div>";
+                // contentEl.innerHTML = formattedFrontMatter;
+                contentEl.innerHTML += `<p>Sorry, no content found for this project.</p>`;
             }
+        
+            const shareLinkElements = document.querySelectorAll('.share-link#shareLink');
+            shareLinkElements.forEach(function(shareLinkElement) {
+                shareLinkElement.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevents the default anchor behavior
+                    const projectLink = this.getAttribute('data-link');
+        
+                    // Use the Clipboard API to write the link to the clipboard
+                    navigator.clipboard.writeText(projectLink).then(function() {
+                        // console.log('Link copied to clipboard successfully!');
+                        showNotification();
+                    }).catch(function(err) {
+                        console.error('Failed to copy link: ', err);
+                    });
+                });
+            });
         });
 }
 
@@ -210,10 +329,25 @@ function addProjectToGallery(gallery, entry, content) {
     const emoji = info.emoji ? `<span>${info.emoji}</span>` : '';
 
     const description = info.description ? `<p class="card-description">${info.description}</p>` : '';
-    const date = info.date ? `<span class="card-date">${info.date}</span>` : '';
+    // const date = info.date ? `<span class="card-date">${info.date}</span>` : '';
 
-    let links = `<a href="#${gallery}" class="icon-link" id="shareLink" data-link="https://felixludos.com/#${gallery}-${entry}">
+    let fmtdate = '';
+    if (info.date) {
+        const dateObj = new Date(info.date);
+        if (dateObj.toString() === "Invalid Date") {
+            fmtdate = info.date;
+        } else {
+            fmtdate = dateObj.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+        }
+    } else if (info.raw_date) {
+        fmtdate = info.raw_date;
+    }
+    const date = fmtdate ? `<p class="card-date">${fmtdate}</span>` : '';
+    
+    let links = `<a href="#${gallery}" class="share-link" id="shareLink" data-link="https://felixludos.com/#${gallery}-${entry}">
     <i class="fas fa-share-alt"></i></a>`;
+    // let links = `<button class="icon-button" id="shareLink" data-link="https://felixludos.com/#${gallery}-${entry}">
+    // <i class="fas fa-share-alt"></i></button>`;
     if (info.repo) {
         links += `<a href="https://github.com/${info.repo}" target="_blank" class="card-icon">
         <i class="fab fa-github"></i></a>`;
@@ -245,7 +379,7 @@ function addProjectToGallery(gallery, entry, content) {
     `;
     contentEl.innerHTML += projectHtml;
 
-    const shareLinkElements = document.querySelectorAll('.icon-link#shareLink');
+    const shareLinkElements = document.querySelectorAll('.share-link#shareLink');
     shareLinkElements.forEach(function(shareLinkElement) {
         shareLinkElement.addEventListener('click', function(event) {
             event.preventDefault(); // Prevents the default anchor behavior
@@ -317,3 +451,25 @@ function showNotification() {
         notificationElement.classList.remove('active');
     }, 2000);
 }
+
+async function getLastEditDate(filePath, owner = 'felixludos', repo = 'homepage', branch = 'master') {
+    try {
+      const url = `https://api.github.com/repos/${owner}/${repo}/commits?path=${filePath}&sha=${branch}&page=1&per_page=1`;
+      const response = await fetch(url);
+      const data = await response.json();
+
+    //   console.log(`github call ${response.ok}`);
+    //   console.log(data);
+  
+      if (response.ok) {
+        // The date is in ISO 8601 format: "YYYY-MM-DDTHH:MM:SSZ"
+        return data[0].commit.committer.date;
+      } else {
+        console.error("Error retrieving data:", data);
+        return null;
+      }
+    } catch (error) {
+      console.error("An error occurred:", error);
+      return null;
+    }
+  }

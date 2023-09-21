@@ -1,13 +1,12 @@
 ---
-title: "Omni-belt"
-author: "John Doe"
-date: 2023-09-18
+title: Omni-belt
+date: 2020-07-25
 repo: felixludos/omni-belt
-cover: https://images.unsplash.com/photo-1694307547532-71edce50c311?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80
-emoji: 🚀
-description: "A software for the analysis of molecular dynamics simulations."
+cover: https://images.unsplash.com/photo-1501516069922-a9982bd6f3bd?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1440
+emoji: 🔧
+description: Common python utilities for downstream projects
 ---
 
-# Omni-belt
+[![Unit-Tests](https://github.com/felixludos/omni-belt/actions/workflows/tests.yaml/badge.svg)](https://github.com/felixludos/omni-belt/actions/workflows/tests.yaml)
 
-This software will be added soon.
+This is a simple tool belt containing pure python utilities for downstream projects.

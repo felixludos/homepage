@@ -1,27 +1,88 @@
 research:
   type: gallery
   title: Research
+  cover: https://images.unsplash.com/flagged/photo-1579268351234-073f85929562?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
   posts:
-    latent_responses: {}
+    cladder:
+      order: 0
+    latent_responses:
+      order: 1
+    sae:
+      order: 2
+    interv_consis:
+      order: 3
+    motion_nets:
+      order: 4
+    se3_pose_nets:
+      order: 5
+    spa_res:
+      order: 6
 
 software:
   type: gallery
   title: Software
+  # cover: https://plus.unsplash.com/premium_photo-1691960547143-81829ebfe562?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=90
+  # cover: https://images.unsplash.com/photo-1605106901227-991bd663255c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1440
+  cover: https://images.unsplash.com/photo-1605106901227-991bd663255c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
   posts:
-    latentstates: {}
-    omnibelt: {}
-    omnifig: {}
+    omnifig:
+      order: 0
+    omniply:
+      order: 1
+    omnicite:
+      order: 2
+    qc_intro:
+      order: 3
+    nnn:
+      order: 4
+    omnibelt:
+      order: 5
+    omnilearn:
+      order: 6
+    digi_diplo:
+      order: 7
+    ludos:
+      order: 8
+    mpi_cluster:
+      order: 9
+    # omnicrypt:
+    #   order: 10
 
 games:
   type: gallery
   title: Games
+  # cover: https://images.unsplash.com/photo-1611891487122-207579d67d98?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
+  cover: https://images.unsplash.com/photo-1622737133809-d95047b9e673?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
   posts:
-    a_lhonneur: {}
-    aristocracy: {}
+    polymer:
+      order: 0
+    jaccuse:
+      order: 1
+    alhonneur:
+      order: 2
+    aristocracy:
+      order: 3
+    mystic:
+      order: 4
+    unwise:
+      order: 5
+    dvx:
+      order: 6
+    # eu_conquest:
+    #   order: 7
 
 essays:
   type: gallery
   title: Essays
+  cover: https://images.unsplash.com/photo-1542188422-1d5db412ecc3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
   posts:
-    pragmatism: {}
-    apocalypse: {}
+    apocalypse:
+      order: 0
+    pragmatism:
+      order: 1
+    agency:
+      order: 2
+    debates:
+      order: 3
+    fake_news:
+      order: 4

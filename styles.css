@@ -1,19 +1,19 @@
 html {
     scroll-behavior: smooth;
-    background-color: #cceBFF;
+    background-color: var(--side-bar-color);
 }
 
 header {
     justify-content: space-between;
-    background-color: #f5f5f5;
+    background-color: var(--background-color);
 }
 header img {
     max-width: 100%;
 }
 
 nav {
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #222;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     /* margin: 0; */
     /* margin: 0 50px; */
     display: flex;
@@ -25,24 +25,26 @@ nav a {
     font-weight: 500;
     flex: 1;
     text-align: center;
-    color: #333;
+    color: var(--text-color);
     transition: color 0.3s ease;
     text-decoration: none;
     padding: 2px;
 }
 nav a:hover {
-    color: #007BFF;
+    color: var(--link-color);
 }
 
 body {
-    border-left: 3px solid #222;
-    border-right: 3px solid #222;
-    background-color: #f0f4ff;
+    border-left: 3px solid var(--border-color);
+    border-right: 3px solid var(--border-color);
+    background-color: var(--background-color);
     font-family: 'Open Sans', sans-serif;
     width: 720px;
     margin: 0 auto;
     min-height: 100vh;
-    margin-bottom: 50px;
+    margin-bottom: 49px;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
 }
 
 main {
@@ -51,10 +53,10 @@ main {
 }
 
 footer {
-    border-top: 1px solid #222;
-    border-left: 3px solid #222;
-    border-right: 3px solid #222;
-    background: #ccc;
+    border-top: 1px solid var(--border-color);
+    border-left: 3px solid var(--border-color);
+    border-right: 3px solid var(--border-color);
+    background: var(--footer-bg-color);
     text-align: center;
     z-index: 1000;
     height: 50px;
@@ -97,10 +99,10 @@ footer {
 }
 
 .project-card {
-    border: 1px solid #e5e5e5;
+    border: 1px solid var(--card-border-color);
     transition: box-shadow 0.3s;
     position: relative;
-    background-color: #fff;
+    background-color: var(--card-bg-color);
     padding: 10px;
 }
 .project-card:hover {
@@ -139,29 +141,16 @@ footer {
     height: 100%;  /* Full height of the card */
 }
 
-.icon-container {
-    position: absolute; /* Positions the icons relative to the closest positioned ancestor (in this case, .project-card) */
-    top: 10px; /* Distance from the top of the card */
-    right: 10px; /* Distance from the right edge of the card */
-    z-index: 1; /* Ensure icons are above other card content */
-}
-.icon-link img {
-    width: 24px;   /* Adjust to your desired size */
-    height: 24px;  /* Adjust to your desired size */
-    display: block;
-    margin-left: 5px; /* Space between multiple icons */
-}
-.icon-link {
-    margin-left: 10px; /* Space between the title and icon */
-    transition: opacity 0.3s; /* Smooth transition for hover effect */
-}
-.icon-link:hover {
-    opacity: 0.7; /* Slight fade effect on hover */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: opacity 0.3s;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Intel One Mono', monospace;
     font-weight: 700;
+    color: var(--text-color);
 }
 
 @font-face {
@@ -224,8 +213,8 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: space-between;
     /* border: 1px solid #e0e0e0; */
-    border: 1px solid #ccc;
-    background-color: #eee;
+    border: 1px solid var(--card-border-color);
+    background-color: var(--card-bg-color);
     padding: 10px;
     /* width: 300px; */
     /* height: 120px; */
@@ -256,7 +245,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .card-date {
     /* margin-top: 10px; */
-    color: grey;
+    color: var(--text-faint-color);
     font-size: 0.8em;
     /* align-content: right; */
     position: absolute;
@@ -273,41 +262,36 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
 }
 
-/* .icon-row {
+.card-footer {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-top: 20px; 
-} */
+    position: relative;
+    bottom: 0;
+    width: 66.67%;
+}
 
 .card-icon {
     text-decoration: none;
-    color: #333; /* or any color you'd like */
+    color: var(--icon-color); /* or any color you'd like */
     font-size: 1.2em; /* adjust icon size */
     margin: 0 20px; /* spacing between icons */
-    /* padding: 10px; */
 }
 
 .card-icon:hover {
     color: #007BFF;
 }
 
-.card-footer {
-    display: flex;
-    /* justify-content: space-around; */
-    align-items: center;
-    position: relative;
-    bottom: 0;
-    width: 66.67%;
-    /* padding: 10px; */
-    /* background-color: #fff; */
-    border-top: 1px solid #eee;
-}
-
 .card-icon:not(:last-child) {
     margin-right: 20px;
 }
 
+.share-link {
+    margin-left: 10px; /* Space between the title and icon */
+    transition: opacity 0.3s; /* Smooth transition for hover effect */
+}
+.share-link:hover {
+    opacity: 0.7; /* Slight fade effect on hover */
+}
 
 .notification {
     position: fixed;
@@ -327,5 +311,134 @@ h1, h2, h3, h4, h5, h6 {
 .notification.active {
     opacity: 1;
     visibility: visible;
+}
+
+#project-header {
+    background-image: url('assets/ideal_city.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 240px; /* You can set to your desired height */
+    max-width: 100%;
+}
+
+.project-page-title-text {
+  display: inline-block;
+  margin: 0;
+}
+.project-page-emoji {
+    font-size: 1.6em;
+    margin-right: 10px;
+}
+.project-page-date {
+    color: var(--text-faint-color);
+    font-size: 0.8em;
+    text-align: right;
+    display: block;
+}
+.project-page-date span {
+    display: block;
+}
+.project-page-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-page-icon {
+    text-decoration: none;
+    color: var(--icon-color); /* or any color you'd like */
+    font-size: 1.2em; /* adjust icon size */
+    margin: 0 20px;
+}
+.project-page-icon:hover {
+    color: #007BFF;
+}
+.project-page-icon:not(:last-child) {
+    margin-right: 20px;
+}
+
+body, a, div, button {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.floating-toggle {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    background-color: var(--mode-toggle-bg-color, #ccc);
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: background-color 0.3s ease;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2); */
+}
+
+.floating-toggle:hover {
+    background-color: var(--mode-toggle-hover-color, #bbb);
+}
+
+/* Hide the sun icon by default */
+#sunIcon {
+    display: none;
+}
+
+#moonIcon, #sunIcon {
+    font-size: 16px; /* You can set the size to your preference */
+}
+
+/* When dark mode is active, switch icons */
+[data-theme="dark"] #moonIcon {
+    display: none;
+}
+[data-theme="dark"] #sunIcon {
+    display: inline;
+}
+  
+
+
+:root {
+    --max: #ffffff;
+    --min: #000000;
+    --side-bar-color: #f0f4ff;
+    --background-color: #eee;
+    --footer-bg-color: #ccc;
+    --card-bg-color: #e5e5e5;
+    --card-border-color: #e0e0e0;
+    --border-color: #222;
+    --text-color: #333;
+    --text-faint-color: #666;
+    --link-color: #0077cc;
+    --icon-color: #333;
+    --mode-toggle-bg-color: #bbb;
+    --mode-toggle-hover-color: #aaa;
+}
+
+/* Dark mode colors */
+[data-theme='dark'] {
+    --max: #000000;
+    --min: #ffffff;
+    --side-bar-color: #222;
+    --background-color: #333;
+    --footer-bg-color: #444;
+    --card-bg-color: #555;
+    --card-border-color: #666;
+    --border-color: #fff;
+    --text-color: #fff;
+    --text-faint-color: #aaa;
+    --link-color: #6dc2ff;
+    --icon-color: #fff;
+    --mode-toggle-bg-color: #ccc;
+    --mode-toggle-hover-color: #aaa;
 }
 
