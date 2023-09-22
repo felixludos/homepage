@@ -9,13 +9,13 @@ research:
       order: 1
     sae:
       order: 2
-    interv_consis:
+    intervconsis:
       order: 3
-    motion_nets:
+    motionnets:
       order: 4
-    se3_pose_nets:
+    se3posenets:
       order: 5
-    spa_res:
+    spares:
       order: 6
 
 software:

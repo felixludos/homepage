@@ -267,7 +267,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     position: relative;
     bottom: 0;
-    width: 66.67%;
+    /* width: 66.67%; */
 }
 
 .card-icon {
@@ -326,7 +326,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 .project-page-emoji {
-    font-size: 1.6em;
+    font-size: 1.8em;
     margin-right: 10px;
 }
 .project-page-date {
@@ -440,5 +440,35 @@ footer a {
     --icon-color: #fff;
     --mode-toggle-bg-color: #ccc;
     --mode-toggle-hover-color: #aaa;
+}
+
+#markdown-container {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+/* #markdown-container h1,
+    #markdown-container h2,
+    #markdown-container h3 {
+    color: #333;
+} */
+
+#markdown-container img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#markdown-container figcaption {
+    text-align: center;
+    font-size: 0.8em;
+    color: var(--text-faint-color);
+}
+
+.project-format-article p, .project-format-article li, .project-format-article blockquote {
+    font-family: 'Computer Modern', serif;
 }
 
