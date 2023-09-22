@@ -4,7 +4,6 @@ date: 2020-03-07
 cover: https://images.unsplash.com/photo-1530213709681-b7e537c923cc?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1440
 emoji: 🔎
 description: Keep Calm and Carry On
-format: article
 ---
 
 > "*The Fake News is working overtime.*" - President Donald Trump (on Twitter, 2018)
@@ -20,7 +19,7 @@ I do have some good news, given that technology has improved since the industria
 
 All that being said, "agree-to-disagree" is a terrible policy. It's the very opposite of making progress - it's actively resisting conflict and thereby actively resisting new ideas and creativity. In fact, throw out respect while you're at it. Respect is more often than not used as a thinly disguised appeal to authority - and that we can definitely do without. We should actively encourage spirited (if not heated) debate - a battle of wits to search for ever better solutions to our problems. We certainly shouldn't resort to fanaticism, but debate isn't about reveling in fanatical beliefs - it's about careful analysis to find the weaknesses in one another's arguments and discovering better alternatives. Although it may sound harsh, we don't need to extoll "love", "understanding", and "respect" - they work fine for tribal culture, but they don't scale well at all. Instead foster learning, creativity, and efficiency those are values we can really use!
 
-## Mass Media
+# Mass Media
 
 The veritable explosion of new information sources from international news organizations, TV/YouTube channels, and just about anyone with a social media account and a smartphone has fundamentally changed the business model of traditional new organizations. This competition has driven the price of information so low that many, if not most, consumers no longer pay for their daily information intake. Consequently, news organizations can't count on surviving off of contributions from their readers, but indirectly by (in some sense) selling their readers to a different kind of customer: advertisers. 
 
@@ -38,10 +37,4 @@ So what information can you give them to maximize the eyeballs on you? Well, you
 
 That being said, CGP Grey points out what kind of ideas are particularly potent for maximizing attention: 
 
-<!-- [This Video Will Make You Angry](https://youtu.be/rE3j_RHkqJc) -->
-<!-- <iframe width="560" height="315" src="https://youtu.be/rE3j_RHkqJc" frameborder="0" allowfullscreen></iframe> -->
-<!-- <embed src="https://youtu.be/rE3j_RHkqJc"
-        type="application/x-shockwave-flash"
-        wmode="transparent" width="425" height="350" /> -->
-
-[![This Video Will Make You Angry](https://img.youtube.com/vi/rE3j_RHkqJc/0.jpg)](https://www.youtube.com/watch?v=rE3j_RHkqJc)
+[This Video Will Make You Angry](https://youtu.be/rE3j_RHkqJc)

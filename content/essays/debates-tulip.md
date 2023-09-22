@@ -4,18 +4,17 @@ date: 2020-07-17
 cover: https://images.unsplash.com/photo-1582487746781-4d8016285598?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
 emoji: 🤐
 description: Improving your ideas > rhetoric
-format: article
 ---
 
 
 > *"When the facts change, I change my mind - pray tell, what do you do?"* - John Maynard Keynes
 > 
 
-## Abstract
+# Abstract
 
 The purpose of a debate is to synthesize and refine your ideas by sharing them and analyzing one another's positions - not persuasion and manipulation to achieve agreement. Persuasion is merely a means to the end of improving your ideas by challenging each other's arguments, so agreement is not only unnecessary for a constructive debate - it actually diminishes creativity and progress by ending the conversation. There are several common mechanisms that stifle debates and discussions such as groupthink and appeals to authority, and although these mechanisms may appear to have some beneficial aspects, especially in the long term they can do a lot of damage and consequently should be discouraged strongly. Finally, I also discuss the common format of a debate, and some rules of thumb to encourage a constructive debate.
 
----
+# Introduction
 
 There are few if any experiences more rewarding than learning something. Realizing that a new trick or idea to better understand reality and make better decisions. There are many ways to learn - from seeing and touching a novel object and immediately sticking it in your mouth to taste and smell it as babies are fond of doing, to using highly sensitive apparatus to make careful measurements of some phenomenon microscopically small or astronomically far away. However, by far the most common way of learning, employed practically daily by every person, is sharing ideas through discussion and debate.
 
@@ -101,13 +100,13 @@ While the format of a constructive debate can vary widely (depending on how form
 
 Aside from the procedural elements which can be adjusted to fit the situation relatively easily, there are also more abstract features that should be encouraged in the atmosphere of a debate:
 
-- **Cherish perplexity** - the more outrageous a position or argument sounds, the more you can learn from it, so look for new positions and don't ever get angry - get attentive.
-- **Be certain in your uncertainty** - the answer to no question is ever "I don't know" - give your best estimate and include your uncertainty - don't be afraid to be wrong, after all, we all always are anyway (at least when it comes to reality).
-- **Ideas matter more than numbers** - while some topics necessitate hard data and numbers, generally the most productive debates focus on ideas and mechanisms, rather than listing sources and parroting statistics back and forth.
-- **Try to change your mind** - your position is flawed there's no doubt about that - identify the flaws together, discuss them, and fix them - if you find no flaws or weaknesses in your arguments you have failed and wasted your time.
-- **Separate the person from the idea** - poor communication skills or presentation are very unreliable indicators of the quality and value of the argument being presented.
-- **Avoid ad hominem attacks** - this debate is a learning experience for every single participant, so they certainly shouldn't attack one another towards one another.
-- **Make good jokes** - no debate is too formal for the occasional joke to lighten the mood, and there are plenty of jokes that don't have to be at the expense of anyone else, so there's no need to offend anyone (ever) - you are learning about something you care about, why not enjoy it?
+- Cherish perplexity - the more outrageous a position or argument sounds, the more you can learn from it, so look for new positions and don't ever get angry - get attentive.
+- Be certain in your uncertainty - the answer to no question is ever "I don't know" - give your best estimate and include your uncertainty - don't be afraid to be wrong, after all, we all always are anyway (at least when it comes to reality).
+- Ideas matter more than numbers - while some topics necessitate hard data and numbers, generally the most productive debates focus on ideas and mechanisms, rather than listing sources and parroting statistics back and forth.
+- Try to change your mind - your position is flawed there's no doubt about that - identify the flaws together, discuss them, and fix them - if you find no flaws or weaknesses in your arguments you have failed and wasted your time.
+- Separate the person from the idea - poor communication skills or presentation are very unreliable indicators of the quality and value of the argument being presented.
+- Avoid ad hominem attacks - this debate is a learning experience for every single participant, so they certainly shouldn't attack one another towards one another.
+- Make good jokes - no debate is too formal for the occasional joke to lighten the mood, and there are plenty of jokes that don't have to be at the expense of anyone else, so there's no need to offend anyone (ever) - you are learning about something you care about, why not enjoy it?
 
 Note that "being respectful" is not on the list - that is no accident and is addressed a little above, and will be treated further in a separate article in the future.
 

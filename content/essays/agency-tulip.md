@@ -4,19 +4,18 @@ date: 2020-10-04
 cover: https://images.unsplash.com/photo-1533032968297-a47e51cbdc93?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1440
 emoji: ✊
 description: The world is quite pretty from up here!
-format: article
 ---
 
 > "*You know the difference between capitalism and socialism? In capitalism, man exploits man. In socialism, it's the other way around.*" - Douglas Smith (as Marcus Isaacson in *The Alienist*)
 > 
 
-## Might and Power
+# Might and Power
 
 Let's not treat "power" as some mysterious force that governs just about every major decision in society possessed (or possibly even recognized) by a select few while the other sheeple deal with the consequences. That reeks of some mystical great man history that invariably oversimplifies the beautiful complexity of the real world. Perhaps we appeal to power as some overzealous form of gatekeeping to encourage groupthink towards the "accepted" (whatever that means) explanation. This cannot possibly help us improve our understanding of how the world works. 
 
 Every single person has some goals they work towards (consciously and subconsciously). Their plans and predictions may or may not include interacting or manipulating other people around them (ie. the use of power). However, no matter what their goals are, ultimately the better their tools (ie. models, understanding, knowledge) are, the more likely they will achieve their goals (or at least make significant progress).
 
-## Bottomline: How can we better achieve our goals?
+# Bottomline: How can we better achieve our goals?
 
 So now let's ask the central question: how do we gain knowledge based on our experiences which will help us achieve our goals? This question is not just central to theoretical scientists, or academics, but to every single person working towards some goal.
 
@@ -28,12 +27,11 @@ Again, I want to stress that these subtleties in reliably extracting knowledge f
 
 So let's dive in: Firstly, we should take a look at the "Causal Hierarchy" to get an idea for how depending on what questions we try to answer, we have to be increasingly more careful with the kind of evidence we rely on for answers. Below is a breakdown of the "causal hierarchy" - in particular focus on the examples to get a sense for what kind of questions require different "levels" of support. Below we'll discuss how we can extract information for each of the three different levels from our own experience.
 
-<figure>
-  <img src="https://pbs.twimg.com/media/EdcbAe9WAAAso3R?format=jpg&name=large" alt="Judea Pearl’s Ladder of Causation"/>
-  <figcaption>Judea Pearl’s Ladder of Causation (from "the Book of Why")</figcaption>
-</figure>
+[Judea Pearl’s Ladder of Causation. Illustrator: Maayan Hare (from "the Book of Why")](https://pbs.twimg.com/media/EdcbAe9WAAAso3R?format=jpg&name=large)
 
-### Association
+<!-- Judea Pearl’s Ladder of Causation. Illustrator: Maayan Hare (from "the Book of Why") -->
+
+## Association
 
 This is the lowest level in the causal hierarchy because it is the least stringent in terms of what information we can use to make progress in answering the corresponding questions. Associations boil down to us making observations and recognizing patterns (→ correlations) within. For example, I might observe that there are more bugs in my room when there is some leftover food from the previous day than when the room is clean. Such observations can allow me to predict how many bugs (and possibly even where I will find them) based on how much food there is in my room. 
 
@@ -41,7 +39,7 @@ However, no matter how many of these observations I make, I will not be able to 
 
 The problem is that just from observing a correlation between birds chirping and the sun rising, I cannot know whether one causes the other, or whether they are possibly both caused by some additional variable unbeknownst to me.
 
-### Intervention
+## Intervention
 
 While associations may be sufficient for predictions because they do not help understand the causal structure of the world, they are not sufficient for me to control my surroundings (→ achieve my goals). For control, we have to reason about the consequences of our actions → interventions.
 
@@ -51,7 +49,7 @@ To return to our example, if I want to know whether not cleaning up leftover foo
 
 However, no matter how often I intervene on the system and observe the results, I won't be able to answer why the number of bugs in the room changes over time, nor can I explain why there are a certain number of bugs in my room as such questions require counterfactuals.
 
-### Counterfactuals
+## Counterfactuals
 
 Note that we can already get pretty far by studying associations and interventions, as those enable us to make predictions and control our environment respectively, so in many cases we might not even have to bother with the additional effort of studying counterfactuals. However, if we want to expand our understanding of not just what happens, and how we can make something happen, but also why it happens, and especially what other variables may be worth taking into account, then we need counterfactuals.
 
@@ -59,9 +57,9 @@ Counterfactuals don't just require interventions, but they require interventions
 
 Practically speaking, gaining counterfactual knowledge is very challenging precisely because we can never be certain that we have adequately controlled all the relevant parameters. With our familiar example, if I want to know how many bugs there would have been if I had left twice as much leftover food in the room, then it's not sufficient to identify a single causal link (between food and the number of bugs). Instead, I have to take into account (ideally all) other variables that may affect the results, such as whether there are any cracks or holes in the wall, what the weather was like yesterday, whether my room is on the ground floor or very high up, etc.
 
-A more realistic example where counterfactual reasoning is very common is physics - in fact, just about every model in physics is actually a counterfactual model. For example, Hooke's law $U=\\frac{1}{2}kx^2$ tells us not just how much energy is stored in some spring when it is stretched out by some distance $x$, but also how much energy would be stored in the spring if it had been stretched out twice as much (or any other distance). While physicists also have no guarantee that there aren't actually some relevant other variables unbeknownst to us that affect the amount of energy stored in the spring, we can use these models to answer counterfactual questions, and as soon as we find a better model, we replace and our current one.
+A more realistic example where counterfactual reasoning is very common is physics - in fact, just about every model in physics is actually a counterfactual model. For example, Hooke's law $U=\frac{1}{2}kx^2$ tells us not just how much energy is stored in some spring when it is stretched out by some distance $x$, but also how much energy would be stored in the spring if it had been stretched out twice as much (or any other distance). While physicists also have no guarantee that there aren't actually some relevant other variables unbeknownst to us that affect the amount of energy stored in the spring, we can use these models to answer counterfactual questions, and as soon as we find a better model, we replace and our current one.
 
-## Maximizing Agency
+# Maximizing Agency
 
 Even though reasoning about counterfactuals requires the most stringent setup and forethought, nonetheless, it is the counterfactuals that enable us to just to control our surroundings but to expand our control and thereby reach our goals (whatever they are) even easier.
 

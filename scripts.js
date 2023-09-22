@@ -154,6 +154,8 @@ function loadGallery(gallery) {
 
     const info = window.siteStructure[gallery];
 
+    document.title = info.title;
+
     const coverimage = info.cover ? info.cover : 'assets/ideal_city.jpg';
     document.getElementById('project-header').style.backgroundImage = `url('${coverimage}')`;
 
@@ -188,12 +190,6 @@ function loadGallery(gallery) {
             addProjectToGallery(gallery, key, content);
         });
     });
-    // const promises = Object.keys(info.posts).map(key => {
-    //     return fetchProjectContent(gallery, key)
-    //         .then(content => {
-    //             addProjectToGallery(gallery, key, content);
-    //         });
-    // });
 }
 
 function loadProjectPage(gallery, entry) {
@@ -204,6 +200,11 @@ function loadProjectPage(gallery, entry) {
             const frontMatter = extractFrontMatter(content);
             Object.assign(info, frontMatter);
             const markdownContent = removeFrontMatter(content);
+
+            if (info.title) {
+                document.title = info.title;
+            }
+            // document.icon
             
             const coverimage = info.cover ? info.cover : 'assets/ideal_city.jpg';
             document.getElementById('project-header').style.backgroundImage = `url('${coverimage}')`;
@@ -262,25 +263,17 @@ function loadProjectPage(gallery, entry) {
             contentEl.innerHTML += projectHtml;
 
             if (markdownContent) {
-                // If the markdown file has content, render it
-                contentEl.innerHTML += marked(markdownContent);
-            // } else if (info.repo) {
-            //     // If there's an associated GitHub repo, fetch the README
-            //     const [username, repoName] = info.repo.split('/');
-            //     fetchGitHubReadme(username, repoName)
-            //         .then(readme => {
-            //             contentEl.innerHTML = marked(readme);
-            //         });
+                const format_type = `project-format-${(info.format || 'default')}`;
+                const raw_content = marked(markdownContent);
+
+                const content = `<div class="${format_type}" id="markdown-container">${raw_content}</div>`;
+
+                contentEl.innerHTML += content;
             } else {
-                // If there's no repo or markdown content, display the front matter
-                // let formattedFrontMatter = "<div class='front-matter'>";
-                // for (let key in info) {
-                //     formattedFrontMatter += `<p><strong>${key}:</strong> ${info[key]}</p>`;
-                // }
-                // formattedFrontMatter += "</div>";
-                // contentEl.innerHTML = formattedFrontMatter;
                 contentEl.innerHTML += `<p>Sorry, no content found for this project.</p>`;
             }
+
+            MathJax.typesetPromise();
         
             const shareLinkElements = document.querySelectorAll('.share-link#shareLink');
             shareLinkElements.forEach(function(shareLinkElement) {

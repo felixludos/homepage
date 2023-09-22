@@ -4,13 +4,14 @@ date: 2021-03-07
 cover: https://images.unsplash.com/photo-1564761893244-93905e95e9a3?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1440
 emoji: 👽
 description: A brief essay on the end of the world
+format: article
 ---
 
 
 > "*The future's uncertain and the end is always near.*" - Jim Morrison (in the song *Roadhouse Blues* by The Doors)
 > 
 
-# "The End is nigh"
+## "The End is nigh"
 
 Perhaps as old as language itself is the tradition of describing and predicting the end of the world. Some of the oldest tales passed down to us either in writing or even by mouth are about the apocalypse in one form or another. Interestingly, the end of the world is not just the subject of the unfortunate few communities that suffered from some devastating hurricane or earthquake which beat any optimism out of them for generations to come. Instead, from overzealous priests to distinguished scientists, the affluent megalomaniacs as well as the ascetic beggars, everyone's counting down to doomsday in one way or another [1].
 
@@ -22,7 +23,7 @@ However, as we learn more about the world, and we graduate from a hand full of b
 
 Well as is readily apparent by public discourse today, our macabre fixation on the complete annihilation of all we love and cherish does not subside, arguably it has even grown. Why?
 
-# The Modern Doomsday
+## The Modern Doomsday
 
 Well, one undeniable difference between life today and life anytime in history, is that today more than ever your life depends directly on the actions and decisions of countless, nameless, and faceless people around the world. So much so that the basic objects we take for granted like a pencil or computer mouse require the time and expertise of so many, we could not hope to manufacture them with comparable quality and cost ourselves [2,3]. This incomprehensible interconnectedness juxtaposed with the relatively negligible biological changes to the human brain and mental faculties results in individuals seeing, studying, and understanding less and less of how the world continues to function.
 
@@ -32,7 +33,7 @@ Thus the modern conception of impending doom is born, not out of an immediate fe
 
 *Perhaps the gods will grow bored of us and decide to start over with a new universe, maybe one of the gods just makes a tiny mistake accidentally wiping humans out entirely, perhaps for a laugh, perhaps God will once and for all deliver judgment on our deeds and souls, perhaps a lengthy winter ushers in Ragnarok, perhaps we will awaken to a new greater form of consciousness, perhaps we will be reborn again into a fundamentally new world we cannot conceive of with our mere earthly intellect, perhaps someone will press the big red button unleashing nuclear holocaust, perhaps the clowns on Wallstreet finally cause the world economy to implode turning us all into wild animals, perhaps it'll be a pathogen that does us in for good, perhaps the climate irreparably alters all ecosystems to wipe out the tiny niche occupied by Homo sapiens, perhaps it's a giant asteroid that polishes us off, maybe the physicists miscalculate and create a black hole with their gizmos and accelerators, maybe the sun explodes, maybe we achieve general artificial intelligence only for the super intelligent AI to convert all matter into poststamps or paperclips, maybe Facebook or Google or Amazon will use their algorithms to turn us all into mindless zombies, maybe the radiation from our cell phones will make everyone sterile, maybe aliens invade and feast on Earth for a snack, maybe the aliens decide Earth has to make way for some intergalactic bypass, maybe the poles invert causing our heads to explode, maybe the gay agenda will come to fruition and end civilized society for good, maybe the Jews will do it, or the communists, or the terrorists, the freemasons, the bourgeoisie, the deep state, the CIA, the KGB, the new world order, the elite, the main stream media, big tech, hippies, feminists, social justice warriors, politicians, immigrants, Muslims, Antifa, fascists, libertarians, conservatives, liberals ... the ominous "*they*".*
 
-# The ominous "*they*"
+## The ominous "*they*"
 
 As discussed above, the world is too complex for you to know where your food comes from, much less what the economy will look like next year, or whether your taxes are being put to good use. However, such a complex system with so many possibly unreliable or untrustworthy links so tightly coupled must be kept in line somehow. 
 
@@ -51,7 +52,7 @@ So should we resign ourselves to invoking the supernatural - if only to avoid co
 
 I'm not satisfied with such solutions, and to be quite frank, I hope neither are you. Pointing to some fundamentally incomprehensible, benevolent force that keeps things running smoothly ends the conversation far too quickly. Meanwhile pointing to some perceived boogeyman to be the source of all our woes and dangers is childish to the point of being dangerous.
 
-# Hitting Snooze on Alarmism
+## Hitting Snooze on Alarmism
 
 Let's not point fingers (no matter how culturally appropriate such behavior is). Let's take a step back from the rabid overzealous attribution to look around for a bit. What is this "complex system" really? What makes it so complex? How crazy is this world really? Are we really just one step away from doomsday?
 
@@ -61,7 +62,7 @@ Don't believe me? I don't blame you - our culture both intentionally and uninten
 
 But we are not swayed that easily. Let's look past the big words, numbers, and (sometimes even) pretty charts the smart, kind salesman uses, and instead consider a simple rule of thumb. 
 
-## The Pinhole Principle
+### The Pinhole Principle
 
 The pinhole principle is just a fancy name for the tendency for any event or idea to look better the more you zoom out spatially and temporally. The problem is that in the process of framing the event/idea we are constrained by our single, necessarily shallow perspective. Just by the fact that we can't see through more than two eyes, we are missing a lot. That's not to say our perspective is worthless, in fact, the flipside of only ever perceiving through our own eyes is that our perspective is necessarily unique, so whatever conclusions we draw from what we see is invaluable information to everyone else.
 
@@ -81,15 +82,15 @@ The pinhole principle similarly regularizes our own convictions. However, the pr
 
 A slightly more jargony version: given whatever metric we use to evaluate whether a decision/event was good or bad, call that the score function, the more narrow your perspective, the higher variance our score function has (some events can be great, others are devastating) and perhaps the mean score is difficult to estimate. However, as we broaden the perspective and take into account the myriad of subtle consequences, the variance decreases (there are far fewer national/global events that are sublime or terrible), but the mean is biased in the positive from the network effects that, given the relative homogeneity between humans compared to non-humans, we tend to interpret favorably.
 
-## Improvement without the Doom and Gloom
+### Improvement without the Doom and Gloom
 
 Let's agree not to sell one another some ultimate antidote to the end of the world. We already have to deal with enough desperate advertising and tired sales pitches anyway. We’re both here to improve the world as best we can, right? Will doom and gloom help? Perhaps it's too much of a cliché, or perhaps that in and of itself is your answer.
 
 I'm not saying we shouldn't get passionate about where and how we want to apply our brilliant ideas to address the shortcomings we observe on a daily basis. However, I suggest we strive as best we can to aim beyond our minuscule pinhole perspectives and temper our passions which make hyperbole and exaggeration so appealing. *Look up, not down* - seek perplexity, because the more new information you can incorporate into your worldview, the more knowledge you have at your disposal to achieve your (and everyone else’s) goals.
 
-[Maximizing Agency](#essays-agency)
+Related essay: [Maximizing Agency](#essays-agency)
 
-# Further Reading
+## Further Reading
 
 1. [https://en.wikipedia.org/wiki/Apocalypticism](https://en.wikipedia.org/wiki/Apocalypticism)
 2. [https://www.ted.com/talks/matt_ridley_when_ideas_have_sex/transcript](https://www.ted.com/talks/matt_ridley_when_ideas_have_sex/transcript)

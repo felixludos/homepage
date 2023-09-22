@@ -10,7 +10,9 @@ description: A rich strategy card game for 2-4 players
 
 > *Aristocrats don't work. They own land, make money off their estate, and play cards in their château. Can you handle that?*
 
-A strategy card game created by Felix Leeb over the course of the Summer of 2018 (and beyond).
+A strategy card game I created over the course of the Summer of 2018 (and beyond).
 
-This repo contains the rules for the base game, as well as variants and expansions. Overall, I would recommend playing the base game with the Journeys and Commissions expansions.
+You can find the rules of the game [here](https://github.com/felixludos/Games/blob/main/Aristocracy/Aristocracy.md), as well as variants and expansions in the repo. 
+
+Generally, I would recommend playing the base game with the Journeys and Commissions expansions.
 

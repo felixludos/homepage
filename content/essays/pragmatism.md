@@ -4,6 +4,7 @@ date: 2021-06-14
 cover: https://images.unsplash.com/photo-1496065187959-7f07b8353c55?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1440
 emoji: 👨‍⚖️
 description: Learning from one another in the face of inherent subjectivity
+format: article
 ---
 
 > "*Dream in a pragmatic way.*" - Aldous Huxley (in an interview in 1962)
@@ -107,7 +108,11 @@ Perhaps it means that you have more/better evidence (whatever that means), or it
 
 If you insist on convincing me (which I don't recommend, arguing to persuade one another often turns into cheerleading and name-calling rather than productive debate), then you play by my rules. If you fail to present your argument in a way that is appealing to me, then you have failed and your argument is poor. I can, if I'm feeling generous, attempt to describe what parts of your argument are lacking, and perhaps even try to show you how my preferred position solves all those flaws your position suffers from. 
 
-![To recognize the *persuasion hill*, just ask yourself: "what do I aim to get out of this discussion/debate?" If you merely wish to faun at your heroes and display your virtues - *cheerleading* is all you need, and persuasion is probably not realistic. To make persuasion more likely you may have to appeal to some form of *truth,* which can indeed get the job done, but we can strive to do better. Climbing over the hill into the regime of *learning*, we realize the folly of obsessing over persuasion and partisanship and can finally unleash our creativity and uniqueness to improve our understanding.](Candid%20Pragmatism%2075908b8b347a4828be5c2236bf084fe0/persuasion_hump_bg.png)
+<figure>
+  <img src="assets/content/persuasion_hump_bg.png" alt="The persuasion hill"/>
+  <figcaption>To recognize the *persuasion hill*, just ask yourself: "what do I aim to get out of this discussion/debate?" If you merely wish to faun at your heroes and display your virtues - *cheerleading* is all you need, and persuasion is probably not realistic. To make persuasion more likely you may have to appeal to some form of *truth,* which can indeed get the job done, but we can strive to do better. Climbing over the hill into the regime of *learning*, we realize the folly of obsessing over persuasion and partisanship and can finally unleash our creativity and uniqueness to improve our understanding.</figcaption>
+</figure>
+
 
 To recognize the *persuasion hill*, just ask yourself: "what do I aim to get out of this discussion/debate?" If you merely wish to faun at your heroes and display your virtues - *cheerleading* is all you need, and persuasion is probably not realistic. To make persuasion more likely you may have to appeal to some form of *truth,* which can indeed get the job done, but we can strive to do better. Climbing over the hill into the regime of *learning*, we realize the folly of obsessing over persuasion and partisanship and can finally unleash our creativity and uniqueness to improve our understanding.
 
@@ -119,15 +124,16 @@ It's only as we climb over the persuasion hill and we start to recognize and eve
 
 Ultimately, coloring yourself as a "skeptic" or "adherent" irrespective of the topic and cheerleading for your *team* is just as nonsensical as believing you have reached some absolute truth that people around you fail to see. If that is indeed so, then I leave you with this light-hearted reference to much deeper philosophical questions, in the hopes it may lead to some reflection...
 
+<figure>
+  <img src="https://imgs.xkcd.com/comics/sheeple.png" alt="Tired of dealing with all these sheeple"/>
+  <figcaption>Source: [2]. 
+Don't mistake a position that is incomprehensible to you, for a position that is fundamentally nonsensical. Appreciating the inherent subjectivity of your perspective will serve you well.</figcaption>
+</figure>
 
-Source: [2]. 
-Don't mistake a position that is incomprehensible to you, for a position that is fundamentally nonsensical. Appreciating the inherent subjectivity of your perspective will serve you well.
+Related essay: [Debates](#essays-debates)
 
-# References
+## References
 
 1. News sorted by bias - [https://www.improvethenews.org/](https://www.improvethenews.org/)
 2. [https://xkcd.com/610/](https://xkcd.com/610/)
 
-## Related
-
-[Debates](#essays-debates)
