@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    let storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    let storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
     document.documentElement.setAttribute("data-theme", storedTheme);
     
     // Update the toggle function to store preference
