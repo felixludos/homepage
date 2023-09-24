@@ -1,6 +1,12 @@
+
+
+<img src="/assets/content/profile.jpg" alt="Profile" width="200" align="right"/>
+
 # {greeting}!
 
-I am a PhD student in the [Empirical Inference Department](https://ei.is.mpg.de/) at the [Max Planck Institute for Intelligent Systems](https://is.mpg.de/). My research interests are in the field of machine learning, especially in the intersection of machine learning and physics. I am interested in developing new methods for learning from data, especially in the context of physical systems. I am also interested in applying machine learning to problems in physics, such as the analysis of molecular dynamics simulations or the simulation of quantum systems.
+Currently, I am working in the [Empirical Inference Department](https://ei.is.mpg.de/) of the Max Planck Institute for Intelligent Systems as a PhD student under the supervision of Bernhard Schölkopf. My research centers around how **causal** structure can be used to improve machine learning systems and in particular **representation learning**.
 
-<!-- Currently, I am working at the Max Planck Institute for Intelligent Systems as a PhD student under the supervision of Bernhard Schölkopf and Stefan Bauer. I earned a Master’s degree in Computer Science in 2019 at the University of Washington, Seattle, USA, under Dieter Fox and Arunkumar Bryavan. Before that, I completed my Bachelor’s degree in Computer Science, Physics, and Chemistry in 2018. At that time, I worked with Lutz Maibaum on analyzing molecular dynamics simulations to characterize the structure of cellular membranes. I also worked with Boris Blinov on simulating trapped ions to improve cooling for storing and processing quantum information. -->
+I earned a Master’s degree in Computer Science in 2019 at the University of Washington, Seattle, USA, under Dieter Fox and the mentorship of Arunkumar Bryavan. Our research focused on [object pose estimation](#research-motionnets) and [visuomotor control](#research-se3posenets) for robotic manipulation.
+
+Before that, I completed my Bachelor’s degree in Computer Science, Physics, and Chemistry in 2018. During my undergraduate degree, I worked with Lutz Maibaum on analyzing molecular dynamics simulations to characterize the [structure of cellular membranes](#research-spares). I also worked with Boris Blinov on simulating trapped ions to improve cooling for storing and processing quantum information.
 

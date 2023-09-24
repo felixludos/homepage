@@ -1,1 +1,3 @@
 # Research
+
+Although my research has touched upon topics spanning computational science and machine learning, my interests all share the theme of **exploiting existing and designing novel structures to understand complex systems**. Be it the latent space of a generative model, the behavior of a large language model, the dynamics of a robot arm, or the structure of a lipid bilayer...

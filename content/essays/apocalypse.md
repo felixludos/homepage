@@ -1,5 +1,5 @@
 ---
-title: Apocalypse Postponed
+title: Apocalypse Postponed!
 date: 2021-03-07
 cover: https://images.unsplash.com/photo-1564761893244-93905e95e9a3?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1440
 emoji: 👽

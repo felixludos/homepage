@@ -19,9 +19,9 @@ research:
     spares:
       order: 6
 
-software:
+code:
   type: gallery
-  title: Software
+  title: Code
   # cover: https://plus.unsplash.com/premium_photo-1691960547143-81829ebfe562?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=90
   # cover: https://images.unsplash.com/photo-1605106901227-991bd663255c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1440
   # cover: https://images.unsplash.com/photo-1605106901227-991bd663255c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
