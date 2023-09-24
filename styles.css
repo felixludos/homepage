@@ -211,6 +211,15 @@ h1, h2, h3, h4, h5, h6 {
     font-style: italic;
 }
 
+.center-text {
+    text-align: center;
+}
+
+.profile-image {
+    border-radius: 10px;
+    margin: 15px;
+}
+
 .card {
     display: flex;
     justify-content: space-between;
@@ -221,6 +230,7 @@ h1, h2, h3, h4, h5, h6 {
     /* width: 300px; */
     /* height: 120px; */
     margin: 10px 0;
+    border-radius: 10px;
 }
 
 .card:hover {
@@ -239,6 +249,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .card-header span {
     margin-right: 10px; /* spacing between emoji and title */
+    font-size: 1.5em;
 }
 .card-title {
     font-weight: bold;
@@ -258,7 +269,6 @@ h1, h2, h3, h4, h5, h6 {
     /* margin-right: 10px; */
 }
 
-/* Right Content (Cover Image) */
 .card-cover {
     width: 33%;
     background-size: cover;
@@ -321,15 +331,21 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url('assets/ideal_city.jpg');
     background-size: cover;
     background-position: center;
-    height: 240px; /* You can set to your desired height */
+    height: 240px;
     max-width: 100%;
 }
 
+.project-page-title {
+    display: flex;
+    align-items: center;
+}
 .project-page-title-text {
-  display: inline-block;
+    display: flex;
+  /* display: inline-block; */
   margin: 0;
 }
 .project-page-emoji {
+    display: flex;
     font-size: 1.8em;
     margin-right: 10px;
 }
@@ -350,8 +366,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .project-page-icon {
     text-decoration: none;
-    color: var(--icon-color); /* or any color you'd like */
-    font-size: 1.2em; /* adjust icon size */
+    color: var(--icon-color);
+    font-size: 1.2em;
     margin: 0 20px;
 }
 .project-page-icon:hover {
