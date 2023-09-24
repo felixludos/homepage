@@ -10,6 +10,7 @@ description: Unleashing project configuration and organization
 
 [![Unit-Tests](https://github.com/felixludos/omni-fig/actions/workflows/tests.yaml/badge.svg)](https://github.com/felixludos/omni-fig/actions/workflows/tests.yaml)
 [![Documentation Status](https://readthedocs.org/projects/omnifig/badge/?version=latest)](https://omnifig.readthedocs.io/en/latest/?badge=latest)
+[![JOSS Status](https://joss.theoj.org/papers/8eb5d7f02686b32f3102a5a03f92f169/status.svg)](https://joss.theoj.org/papers/8eb5d7f02686b32f3102a5a03f92f169)
 
 `omni-fig` is a lightweight package to help you organize your python projects and to make everything clear and easy to understand to collaborators and prospective users, while also offering unparalleled features to accelerate development.
 
