@@ -1,9 +1,5 @@
 
-
-
 <img src="/assets/email-info.png" height="40" alt="Email" align="center">
-
-<!-- <img src="/assets/email.png" alt="Email" height="40" align="center"/> -->
 
 <img class="profile-image" src="/assets/profile.jpg" alt="Profile" width="180" align="right"/>
 
