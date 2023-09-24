@@ -38,10 +38,4 @@ So what information can you give them to maximize the eyeballs on you? Well, you
 
 That being said, CGP Grey points out what kind of ideas are particularly potent for maximizing attention: 
 
-<!-- [This Video Will Make You Angry](https://youtu.be/rE3j_RHkqJc) -->
-<!-- <iframe width="560" height="315" src="https://youtu.be/rE3j_RHkqJc" frameborder="0" allowfullscreen></iframe> -->
-<!-- <embed src="https://youtu.be/rE3j_RHkqJc"
-        type="application/x-shockwave-flash"
-        wmode="transparent" width="425" height="350" /> -->
-
 [![This Video Will Make You Angry](https://img.youtube.com/vi/rE3j_RHkqJc/0.jpg)](https://www.youtube.com/watch?v=rE3j_RHkqJc)

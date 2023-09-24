@@ -1,7 +1,8 @@
 research:
   type: gallery
   title: Research
-  cover: https://images.unsplash.com/flagged/photo-1579268351234-073f85929562?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
+  # cover: https://images.unsplash.com/flagged/photo-1579268351234-073f85929562?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
+  cover: https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
   posts:
     cladder:
       order: 0
@@ -9,8 +10,8 @@ research:
       order: 1
     sae:
       order: 2
-    intervconsis:
-      order: 3
+    # intervconsis:
+    #   order: 3
     motionnets:
       order: 4
     se3posenets:
@@ -23,7 +24,8 @@ software:
   title: Software
   # cover: https://plus.unsplash.com/premium_photo-1691960547143-81829ebfe562?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=90
   # cover: https://images.unsplash.com/photo-1605106901227-991bd663255c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1440
-  cover: https://images.unsplash.com/photo-1605106901227-991bd663255c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
+  # cover: https://images.unsplash.com/photo-1605106901227-991bd663255c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
+  cover: https://images.unsplash.com/photo-1586094332115-680788e0182f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
   posts:
     omnifig:
       order: 0
@@ -52,15 +54,16 @@ games:
   type: gallery
   title: Games
   # cover: https://images.unsplash.com/photo-1611891487122-207579d67d98?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
-  cover: https://images.unsplash.com/photo-1622737133809-d95047b9e673?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
+  # cover: https://images.unsplash.com/photo-1622737133809-d95047b9e673?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
+  cover: https://images.unsplash.com/photo-1560279781-289c6a25cbe9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
   posts:
-    polymer:
-      order: 0
-    jaccuse:
-      order: 1
     alhonneur:
-      order: 2
+      order: 0
     aristocracy:
+      order: 1
+    jaccuse:
+      order: 2
+    polymer:
       order: 3
     mystic:
       order: 4
@@ -74,7 +77,10 @@ games:
 essays:
   type: gallery
   title: Essays
-  cover: https://images.unsplash.com/photo-1542188422-1d5db412ecc3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
+  # cover: https://images.unsplash.com/photo-1542188422-1d5db412ecc3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
+  # cover: https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
+  # cover: https://images.unsplash.com/photo-1528722828814-77b9b83aafb2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
+  cover: https://images.unsplash.com/photo-1606247357835-d27fe83fc6a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
   posts:
     apocalypse:
       order: 0

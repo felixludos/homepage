@@ -5,8 +5,14 @@ repo: felixludos/latent-responses
 arxiv: 2106.16091
 cover: https://images.unsplash.com/photo-1612521564024-c8e661595f61?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1440
 emoji: 🧲
-description: 
+description: Tools to probe the latent space of autoencoders
 ---
+
+> [Exploring the Latent Space of Autoencoders with Interventional Assays](https://openreview.net/forum?id=hdZeYGNCTtN)
+> 
+> **Felix Leeb**, Stefan Bauer, Michel Besserve, Bernhard Schölkopf
+> 
+> [[arXiv:2106.16091](https://arxiv.org/abs/2106.16091)]
 
 In this paper, we investigate the latent space of autoencoders, a critical component in representation learning. We observe that autoencoders often exhibit a kind of idempotence, which can be exploited to characterize the structure of the latent manifold. Based on this behavior, we develop a series of tools to probe the representation using interventions in the latent space to quantify the relationships between latent variables to better understand the latent space. 
 

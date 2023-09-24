@@ -148,7 +148,7 @@ function loadSimplePage(page) {
         });
 }
 
-function loadGallery(gallery) {
+async function loadGallery(gallery) {
     // Access the list of posts from the loaded site structure
     console.log(`Loading gallery: ${gallery}`);
 
@@ -175,19 +175,33 @@ function loadGallery(gallery) {
         if (!entryA.order || !entryB.order) {
             return a.localeCompare(b);
         }
-        return entryA.order - entryB.order; // Sort in ascending order
-        // if (!entryA.date || !entryB.date) {
-        //     return a.localeCompare(b);
-        // }
-        // const dateA = new Date(entryA.date);
-        // const dateB = new Date(entryB.date);
-        // return dateB - dateA; // Sort in descending order
+        return entryA.order - entryB.order;
     });
     
     const promises = sortedKeys.map(key => {
         return fetchProjectContent(gallery, key)
         .then(content => {
-            addProjectToGallery(gallery, key, content);
+            return addProjectToGallery(gallery, key, content);
+        });
+    });
+
+    const card_content = await Promise.all(promises);
+
+    contentEl.innerHTML += card_content.join('\n');
+    
+    const shareLinkElements = document.querySelectorAll('.share-link#shareLink');
+    shareLinkElements.forEach(function(shareLinkElement) {
+        shareLinkElement.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevents the default anchor behavior
+            const projectLink = this.getAttribute('data-link');
+
+            // Use the Clipboard API to write the link to the clipboard
+            navigator.clipboard.writeText(projectLink).then(function() {
+                // console.log('Link copied to clipboard successfully!');
+                showNotification();
+            }).catch(function(err) {
+                console.error('Failed to copy link: ', err);
+            });
         });
     });
 }
@@ -270,7 +284,7 @@ function loadProjectPage(gallery, entry) {
 
                 contentEl.innerHTML += content;
             } else {
-                contentEl.innerHTML += `<p>Sorry, no content found for this project.</p>`;
+                contentEl.innerHTML += `<p>[Sorry, there is no content for this project yet.]</p>`;
             }
 
             MathJax.typesetPromise();
@@ -370,23 +384,8 @@ function addProjectToGallery(gallery, entry, content) {
         </div>
     </a>
     `;
-    contentEl.innerHTML += projectHtml;
-
-    const shareLinkElements = document.querySelectorAll('.share-link#shareLink');
-    shareLinkElements.forEach(function(shareLinkElement) {
-        shareLinkElement.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevents the default anchor behavior
-            const projectLink = this.getAttribute('data-link');
-
-            // Use the Clipboard API to write the link to the clipboard
-            navigator.clipboard.writeText(projectLink).then(function() {
-                // console.log('Link copied to clipboard successfully!');
-                showNotification();
-            }).catch(function(err) {
-                console.error('Failed to copy link: ', err);
-            });
-        });
-    });
+    // contentEl.innerHTML += projectHtml;
+    return projectHtml;
 }
 
 function extractFrontMatter(markdown) {
