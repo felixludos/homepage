@@ -1,5 +1,5 @@
 
-<img src="/assets/email-info.png" height="40" alt="Email" align="center">
+<img class="contact-email" src="/assets/email-info.png" height="40" alt="Email" align="center">
 
 <img class="profile-image" src="/assets/profile.jpg" alt="Profile" width="180" align="right"/>
 
