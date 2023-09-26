@@ -11,3 +11,4 @@ I earned a Master’s degree in Computer Science in 2019 at the University of Wa
 
 Before that, I completed my Bachelor’s degree in Computer Science, Physics, and Chemistry in 2018. During my undergraduate degree, I worked with Lutz Maibaum on analyzing molecular dynamics simulations to characterize the [structure of cellular membranes](#research-spares). I also worked with Boris Blinov on simulating trapped ions to improve cooling for storing and processing quantum information.
 
+Although I was born in Boston, I started school in Vienna, Austria. However,when I was 12, I moved to Washington State and graduated from Redmond High School in 2015. As a result, I am both a native English and German speaker.
