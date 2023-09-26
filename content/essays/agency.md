@@ -3,7 +3,7 @@ title: Maximizing Agency
 date: 2020-10-04
 cover: https://images.unsplash.com/photo-1533032968297-a47e51cbdc93?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1440
 emoji: ✊
-description: The world is pretty interesting when we are all a part of it.
+description: The world is pretty interesting when we all play a part
 format: article
 ---
 

@@ -3,7 +3,7 @@ title: Candid Pragmatism
 date: 2021-06-14
 cover: https://images.unsplash.com/photo-1496065187959-7f07b8353c55?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1440
 emoji: 👨‍⚖️
-description: Learning from one another in the face of inherent subjectivity
+description: Learning from one another in the face of subjectivity
 format: article
 ---
 

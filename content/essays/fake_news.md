@@ -3,7 +3,7 @@ title: Fake News
 date: 2020-03-07
 cover: https://images.unsplash.com/photo-1530213709681-b7e537c923cc?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1440
 emoji: 🔎
-description: Keep Calm and Carry On
+description: Keep Calm and Meme On
 format: article
 ---
 
