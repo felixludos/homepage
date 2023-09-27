@@ -28,25 +28,27 @@ code:
   cover: https://images.unsplash.com/photo-1586094332115-680788e0182f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
   posts:
     omnifig:
-      order: 0
-    omniply:
       order: 1
-    omnicite:
+    omniply:
       order: 2
-    qc_intro:
+    omnicite:
       order: 3
-    nnn:
+    homepage:
       order: 4
-    omnibelt:
-      order: 5
-    omnilearn:
-      order: 6
-    digi_diplo:
-      order: 7
-    ludos:
-      order: 8
     mpi_cluster:
+      order: 5
+    qc_intro:
+      order: 6
+    nnn:
+      order: 7
+    omnibelt:
+      order: 8
+    omnilearn:
       order: 9
+    digi_diplo:
+      order: 10
+    ludos:
+      order: 11
     # omnicrypt:
     #   order: 10
 
