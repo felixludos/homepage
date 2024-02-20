@@ -6,6 +6,8 @@ arxiv: 2106.16091
 cover: https://images.unsplash.com/photo-1612521564024-c8e661595f61?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1440
 emoji: 🧲
 description: Tools to probe the latent space of autoencoders
+level: published
+status: NeurIPS 2022
 ---
 
 > [Exploring the Latent Space of Autoencoders with Interventional Assays](https://openreview.net/forum?id=hdZeYGNCTtN)

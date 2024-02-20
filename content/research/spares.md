@@ -5,6 +5,8 @@ arxiv: 1806.02468
 cover: https://images.unsplash.com/photo-1576086476234-1103be98f096?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
 emoji: ☂️
 description: Featured on the cover of the Biophysical Journal
+level: published
+status: Biophysical Journal
 ---
 
 > [Spatially Resolving the Condensing Effect of Cholesterol in Lipid Bilayers](https://www.cell.com/biophysj/fulltext/S0006-3495(18)31213-X) 

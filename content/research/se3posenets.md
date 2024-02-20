@@ -5,6 +5,8 @@ arxiv: 1710.00489
 cover: https://images.unsplash.com/photo-1516110833967-0b5716ca1387?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
 emoji: 🤖
 description: Structured representation learning for pose estimation and visuomotor control with a 7 DOF robot arm
+level: published
+status: ICRA 2018
 ---
 
 > [SE3-Pose-Nets: Structured Deep Dynamics Models for Visuomotor Planning and Control](https://dl.acm.org/doi/10.1109/ICRA.2018.8461184) 

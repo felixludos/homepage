@@ -6,6 +6,8 @@ arxiv: 1910.13942
 cover: https://images.unsplash.com/photo-1635604133914-e68aa11e99a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
 emoji: 🎥
 description: 6D tracking of unknown objects in unseen environments
+level: published
+status: IROS 2019 Workshop
 ---
 
 > Motion-Nets: 6D Tracking of Unknown Objects in Unseen Environments using RGB
