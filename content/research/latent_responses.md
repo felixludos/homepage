@@ -16,6 +16,6 @@ status: NeurIPS 2022
 > 
 > [[arXiv:2106.16091](https://arxiv.org/abs/2106.16091)]
 
-In this paper, we investigate the latent space of autoencoders, a critical component in representation learning. We observe that autoencoders often exhibit a kind of idempotence, which can be exploited to characterize the structure of the latent manifold. Based on this behavior, we develop a series of tools to probe the representation using interventions in the latent space to quantify the relationships between latent variables to better understand the latent space. 
+In this paper, we investigate the latent space of autoencoders, a critical component in representation learning. We observe that autoencoders are approximately idempotent, which can be exploited to characterize the structure of the latent manifold. Based on this behavior, we develop a series of tools to probe the representation using interventions in the latent space to quantify the relationships between latent variables to better understand the latent space. 
 
 This paper was published in the main proceedings of [NeurIPS 2022](https://papers.nips.cc/paper_files/paper/2022/hash/87213955efbe48b46586e37bf2f1fe5b-Abstract-Conference.html).

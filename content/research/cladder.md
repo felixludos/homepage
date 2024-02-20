@@ -15,7 +15,7 @@ status: NeurIPS 2023
 > 
 > **Zhijing Jin**, **Yuen Chen**, **Felix Leeb**, **Luigi Gresele**, Ojasv Kamal, Zhiheng LYU, Kevin Blin, Fernando Gonzalez Adauto, Max Kleiman-Weiner, Mrinmaya Sachan, Bernhard Schölkopf
 
-Recent developments in large language models (LLMs) have led to a surge of interest in the capabilities of these models. However, it is still unclear how well these models can perform causal reasoning, a key aspect of intelligence. Here, I worked with several colleagues to develop a benchmark to study the novel task of "causal inference in natural language."
+Recent developments in large language models (LLMs) have led to a surge of interest in the capabilities of these models. However, it is still unclear how well these models can perform causal reasoning, a key aspect of intelligence. Here, I worked with several colleagues to develop a benchmark to introduce a novel task we call "causal inference in natural language."
 
 My contribution included designing and developing the dataset generation including simulating causal models and a rich verbalization of the questions, answers, and step-by-step solutions.
 
