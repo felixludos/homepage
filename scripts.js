@@ -49,6 +49,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
 
+    fetch('levels.json')
+        .then(response => response.json())
+        .then(levels => {
+            window.levels = levels;
+        });
+
     fetch('content/_toc.yaml')
         .then(response => {
             if (!response.ok) {
@@ -349,7 +355,8 @@ function addProjectToGallery(gallery, entry, content) {
     } else if (info.raw_date) {
         fmtdate = info.raw_date;
     }
-    const date = fmtdate ? `<p class="card-date">${fmtdate}</span>` : '';
+
+    const date = fmtdate ? `<span class="card-date">${fmtdate}</span>` : '';
     
     let links = `<a href="#${gallery}" class="share-link" id="shareLink" data-link="https://felixludos.com/#${gallery}-${entry}">
     <i class="fas fa-share-alt"></i></a>`;
@@ -364,6 +371,38 @@ function addProjectToGallery(gallery, entry, content) {
         <i class="fas fa-book-open"></i></a>`;
     }
 
+    let statusBadge = '';
+    if (info.level) {
+        const levelInfo = window.levels[info.level];
+
+        if (!levelInfo) {
+            console.error(`No level data found for level: ${info.level}`);
+        } else {
+            const badgeColor = info.status_color ? info.status_color : levelInfo.background;
+            const badgeIcon = info.status_icon ? info.status_icon : levelInfo.icon;
+            const badgeTextColor = info.status_textcolor ? info.status_textcolor : levelInfo.textcolor;
+            const badgeText = info.status_description ? info.status_description : levelInfo.description;
+            const badgeTitle = info.status ? info.status : levelInfo.title;
+
+            const badgeEmoji = `<span class="badge-emoji">${badgeIcon}</span>`;
+            const statusText = `<span class="badge-text">${badgeTitle}</span>`;
+            statusBadge = `<div class="status-badge" style="background-color: ${badgeColor}; color: ${badgeTextColor};" title="${badgeText}">${badgeEmoji} ${statusText}</div>`;
+        }
+        // const badgeColor = info.color ? info.color : '#666'; // Default to GitHub blue if no color is specified
+        // const badgeEmoji = `<span class="badge-emoji">${info.badge}</span>`;
+        // const statusText = `<span class="badge-text">${info.status}</span>`;
+        // const tooltip = info.details ? `title="${info.details}"` : '';
+        // statusBadge = `<div class="status-badge" style="background-color: ${badgeColor};" ${tooltip}>${badgeEmoji} ${statusText}</div>`;
+    }
+
+    const footerContent = `
+    <div class="card-footer">
+        <div class="footer-left">${links}</div>
+        <div class="footer-center">${statusBadge}</div>
+        <div class="footer-right">${date}</div>
+    </div>
+    `;
+
     const projectHtml = `
     <a href="#${gallery}-${entry}" class="card-link">
         <div class="card">
@@ -374,10 +413,7 @@ function addProjectToGallery(gallery, entry, content) {
                     <h2 class="card-title">${info.title}</h2>
                 </div>
                 ${description}
-                <div class="card-footer">
-                    ${links}
-                    ${date}
-                </div>
+                ${footerContent} <!-- Footer with links, badge, and date -->
             </div>
             <!-- Right Content -->
             ${coverImage}
