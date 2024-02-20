@@ -263,6 +263,32 @@ function loadProjectPage(gallery, entry) {
                 links += `<a href="https://arxiv.org/abs/${info.arxiv}" target="_blank" class="project-page-icon">
                 <i class="fas fa-book-open"></i></a>`;
             } // <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3.842 0a1.004 1.004 0 0 0-.922.608c-.153.369-.044.627.294 1.111l6.919 8.36l-1.023 1.106a1.04 1.04 0 0 0 .003 1.423l1.23 1.313l-5.44 6.444c-.28.3-.453.823-.297 1.199a1.025 1.025 0 0 0 .959.635a.913.913 0 0 0 .689-.34l5.783-6.126l7.49 8.005a.853.853 0 0 0 .684.26a.958.958 0 0 0 .877-.615c.158-.377-.017-.75-.306-1.14L13.73 13.9l1.064-1.13a.963.963 0 0 0 .009-1.317L4.633.465S4.26.01 3.867 0zm0 .272h.017c.218.005.487.272.564.364l.005.006l.005.005l10.17 10.99a.692.692 0 0 1-.008.946l-1.066 1.133l-1.498-1.772l-8.6-10.39c-.328-.472-.352-.619-.26-.841a.73.73 0 0 1 .671-.44Zm14.341 1.57a.877.877 0 0 0-.655.242l-5.696 6.158l1.694 1.832l5.309-6.514c.325-.433.479-.66.325-1.029a1.12 1.12 0 0 0-.977-.689zm-7.655 12.282l1.318 1.414l-5.786 6.13a.65.65 0 0 1-.496.26a.752.752 0 0 1-.706-.467c-.112-.269.036-.687.244-.909l.005-.005l.005-.006z"/></svg>
+            
+            
+            let statusBadge = '';
+            if (info.level) {
+                const levelInfo = window.levels[info.level];
+
+                if (!levelInfo) {
+                    console.error(`No level data found for level: ${info.level}`);
+                } else {
+                    const badgeColor = info.status_color ? info.status_color : levelInfo.background;
+                    const badgeIcon = info.status_icon ? info.status_icon : levelInfo.icon;
+                    const badgeTextColor = info.status_textcolor ? info.status_textcolor : levelInfo.textcolor;
+                    const badgeText = info.status_description ? info.status_description : levelInfo.description;
+                    const badgeTitle = info.longstatus ? info.longstatus : (info.status ? info.status : levelInfo.title);
+
+                    const badgeEmoji = `<span class="badge-emoji">${badgeIcon}</span>`;
+                    const statusText = `<span class="badge-text">${badgeTitle}</span>`;
+                    statusBadge = `<div class="status-badge" style="background-color: ${badgeColor}; color: ${badgeTextColor};" title="${badgeText}">${badgeEmoji} ${statusText}</div>`;
+                }
+                // const badgeColor = info.color ? info.color : '#666'; // Default to GitHub blue if no color is specified
+                // const badgeEmoji = `<span class="badge-emoji">${info.badge}</span>`;
+                // const statusText = `<span class="badge-text">${info.status}</span>`;
+                // const tooltip = info.details ? `title="${info.details}"` : '';
+                // statusBadge = `<div class="status-badge" style="background-color: ${badgeColor};" ${tooltip}>${badgeEmoji} ${statusText}</div>`;
+            }
+            
             const projectHtml = `
             <div class="project-page-header">
                 <div class="project-page-title">
@@ -273,6 +299,7 @@ function loadProjectPage(gallery, entry) {
                     <div>
                         ${links}
                     </div>
+                    ${statusBadge}
                     <div id="project-page-dates">
                         ${date}
                         ${updateddate}
