@@ -19,5 +19,5 @@ Recent developments in large language models (LLMs) have led to a surge of inter
 
 My contribution included designing and developing the dataset generation including simulating causal models and a rich verbalization of the questions, answers, and step-by-step solutions.
 
-We presented our work at [NeurIPS 2023](https://openreview.net/forum?id=e2wtjx0Yqu).
+This paper was published in the main proceedings of [NeurIPS 2023](https://openreview.net/forum?id=e2wtjx0Yqu).
 
