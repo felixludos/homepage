@@ -8,3 +8,4 @@ Gemfile.lock
 .idea/
 extra/
 assets/content/md_sim.mp4
+.vscode/
