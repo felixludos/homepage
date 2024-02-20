@@ -6,6 +6,7 @@ cover: https://images.unsplash.com/photo-1534777410147-084a460870fc?ixlib=rb-1.2
 # emoji: 📑
 emoji: 🪵
 description: Unleashing project configuration and organization
+level: done
 ---
 
 [![Unit-Tests](https://github.com/felixludos/omni-fig/actions/workflows/tests.yaml/badge.svg)](https://github.com/felixludos/omni-fig/actions/workflows/tests.yaml)

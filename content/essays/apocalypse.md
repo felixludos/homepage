@@ -5,6 +5,7 @@ cover: https://images.unsplash.com/photo-1564761893244-93905e95e9a3?ixlib=rb-1.2
 emoji: 👽
 description: A brief essay on the end of the world
 format: article
+level: done
 ---
 
 

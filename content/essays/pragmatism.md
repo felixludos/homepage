@@ -5,6 +5,7 @@ cover: https://images.unsplash.com/photo-1496065187959-7f07b8353c55?ixlib=rb-1.2
 emoji: 👨‍⚖️
 description: Learning from one another in the face of subjectivity
 format: article
+level: done
 ---
 
 > "*Dream in a pragmatic way.*" - Aldous Huxley (in an interview in 1962)

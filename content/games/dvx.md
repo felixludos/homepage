@@ -5,6 +5,7 @@ repo: felixludos/Games/tree/main/DVX
 cover: https://images.unsplash.com/photo-1560003987-4282dfd342a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
 emoji: ♟
 description: A simple abstract strategy board game
+level: published
 ---
 
 This is a relatively simple two player abstract strategy, which nevertheless has a surprising amount of depth. The goal is to dominate as much of the board as possible, while simultaneously preventing your opponent from doing the same, occasionally by gobbling up their pieces.

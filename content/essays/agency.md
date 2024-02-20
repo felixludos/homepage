@@ -5,6 +5,7 @@ cover: https://images.unsplash.com/photo-1533032968297-a47e51cbdc93?ixlib=rb-1.2
 emoji: ✊
 description: The world is pretty interesting when we all play a part
 format: article
+level: done
 ---
 
 > "*You know the difference between capitalism and socialism? In capitalism, man exploits man. In socialism, it's the other way around.*" - Douglas Smith (as Marcus Isaacson in *The Alienist*)

@@ -5,6 +5,7 @@ repo: felixludos/digi-diplo
 cover: https://images.unsplash.com/photo-1589639293663-f9399bb41721?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjYzOTIxfQ&w=1440
 emoji: 🎩
 description: Scripts to manage Diplomacy games over Discord
+level: done
 ---
 
 Diplomacy is a devilishly clever strategy game full of intrigue and backstabbing. One of my favorite aspects of the game is that, even though it requires 7-players, it can comfortably be played remotely using pretty much any instant messaging client (in particular Discord). That being said, managing the game (including adjudicating players' orders and drawing the resulting map) can be a tedious amount of work.

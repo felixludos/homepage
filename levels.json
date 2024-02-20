@@ -1,16 +1,23 @@
 {
-    "preview": {
-        "title": "Preview",
+    "idea": {
+        "title": "Idea",
         "background": "#c0392b",
         "textcolor": "#eee",
-        "icon": "🔔",
+        "icon": "💡",
         "description": "This is an initial announcement, but the project is not yet ready for the public. Stay tuned for updates!"
+    },
+    "review": {
+        "title": "Under Review",
+        "background": "#d35400",
+        "textcolor": "#eee",
+        "icon": "🔎",
+        "description": "The project is under review, and may be subject to change. Stay tuned for updates!"
     },
     "flux": {
         "title": "Developing",
         "background": "#c7a600",
         "textcolor": "#eee",
-        "icon": "🔨",
+        "icon": "🎬",
         "description": "There's a sneak peek available, but the project is still under development, so expect changes!"
     },
     "draft": {
@@ -24,7 +31,7 @@
         "title": "Completed",
         "background": "#217dbb",
         "textcolor": "#eee",
-        "icon": "🔔",
+        "icon": "🎉",
         "description": "The project has been completed and is being actively maintained."
     },
     "published": {

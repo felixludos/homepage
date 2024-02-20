@@ -5,6 +5,7 @@ cover: https://images.unsplash.com/photo-1530213709681-b7e537c923cc?ixlib=rb-1.2
 emoji: 🔎
 description: Keep Calm and Meme On
 format: article
+level: archived
 ---
 
 > "*The Fake News is working overtime.*" - President Donald Trump (on Twitter, 2018)

@@ -4,6 +4,7 @@ date: 2024-01-01
 cover: https://images.unsplash.com/photo-1584573062914-a1f7848470a2?&q=85&fm=jpg&crop=entropy&cs=srgb&w=1440
 emoji: 🌸
 description: A simple, general structure for Python packages to promote better software design
+level: draft
 ---
 
 <figure>

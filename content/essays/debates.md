@@ -5,6 +5,7 @@ cover: https://images.unsplash.com/photo-1582487746781-4d8016285598?ixlib=rb-4.0
 emoji: 🤐
 description: Improving your ideas > rhetoric
 format: article
+level: done
 ---
 
 

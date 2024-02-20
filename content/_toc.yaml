@@ -4,6 +4,12 @@ research:
   # cover: https://images.unsplash.com/flagged/photo-1579268351234-073f85929562?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
   cover: https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
   posts:
+    reasoning:
+      order: 0
+    rys:
+      order: 0
+    babel:
+      order: 0
     cladder:
       order: 0
     latent_responses:
@@ -59,11 +65,11 @@ games:
   # cover: https://images.unsplash.com/photo-1622737133809-d95047b9e673?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
   cover: https://images.unsplash.com/photo-1560279781-289c6a25cbe9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
   posts:
-    alhonneur:
-      order: 0
     aristocracy:
-      order: 1
+      order: 0
     jaccuse:
+      order: 1
+    alhonneur:
       order: 2
     polymer:
       order: 3
@@ -73,6 +79,8 @@ games:
       order: 5
     dvx:
       order: 6
+    # lords:
+    #   order: 7
     # eu_conquest:
     #   order: 7
 
