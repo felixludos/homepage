@@ -7,23 +7,23 @@ research:
     reasoning:
       order: 0
     rys:
-      order: 0
-    babel:
-      order: 0
-    cladder:
-      order: 0
-    latent_responses:
       order: 1
-    sae:
+    babel:
       order: 2
+    cladder:
+      order: 3
+    latent_responses:
+      order: 4
+    sae:
+      order: 5
     # intervconsis:
     #   order: 3
     motionnets:
-      order: 4
-    se3posenets:
-      order: 5
-    spares:
       order: 6
+    se3posenets:
+      order: 7
+    spares:
+      order: 8
 
 code:
   type: gallery
