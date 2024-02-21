@@ -1,6 +1,6 @@
 ---
 title: CLadder
-date: 2023-12-16
+date: 2023-09-21
 repo: causalNLP/cladder
 arxiv: 2312.04350
 # cover: https://images.unsplash.com/photo-1518810765707-4f7d5d811ce0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80

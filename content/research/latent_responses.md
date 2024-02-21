@@ -1,6 +1,6 @@
 ---
 title: Latent Responses
-date: 2022-10-12
+date: 2022-10-31
 repo: felixludos/latent-responses
 arxiv: 2106.16091
 cover: https://images.unsplash.com/photo-1612521564024-c8e661595f61?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1440
