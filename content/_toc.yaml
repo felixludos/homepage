@@ -6,8 +6,8 @@ research:
   posts:
     reasoning:
       order: 0
-    rys:
-      order: 1
+    # rys:
+    #   order: 1
     babel:
       order: 2
     cladder:
