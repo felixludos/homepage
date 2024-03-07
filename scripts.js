@@ -183,7 +183,7 @@ async function loadGallery(gallery) {
         }
         return entryA.order - entryB.order;
     });
-    
+
     const promises = sortedKeys.map(key => {
         return fetchProjectContent(gallery, key)
         .then(content => {
