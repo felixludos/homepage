@@ -13,9 +13,9 @@ research:
     cladder:
       order: 3
     latent_responses:
-      order: 4
-    sae:
       order: 5
+    sae:
+      order: 4
     # intervconsis:
     #   order: 3
     motionnets:
