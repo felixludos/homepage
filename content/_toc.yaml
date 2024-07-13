@@ -4,26 +4,28 @@ research:
   # cover: https://images.unsplash.com/flagged/photo-1579268351234-073f85929562?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
   cover: https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
   posts:
-    reasoning:
+    calm:
       order: 1
+    reasoning:
+      order: 2
     # rys:
     #   order: 1
     babel:
-      order: 2
-    cladder:
       order: 3
-    latent_responses:
-      order: 5
-    sae:
+    cladder:
       order: 4
+    latent_responses:
+      order: 6
+    sae:
+      order: 5
     # intervconsis:
     #   order: 3
     motionnets:
-      order: 6
-    se3posenets:
-      order: 7
-    spares:
       order: 8
+    se3posenets:
+      order: 9
+    spares:
+      order: 10
 
 code:
   type: gallery

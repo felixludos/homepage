@@ -255,6 +255,10 @@ function loadProjectPage(gallery, entry) {
         
             let links = `<a href="#${gallery}-${entry}" class="share-link" id="shareLink" data-link="https://felixludos.com/#${gallery}-${entry}">
             <i class="fas fa-share-alt"></i></a>`;
+            if (info.url) {
+                links += `<a href="${info.url}" target="_blank" class="project-page-icon">
+                <i class="fas fa-globe"></i></a>`;
+            }
             if (info.repo) {
                 links += `<a href="https://github.com/${info.repo}" target="_blank" class="project-page-icon">
                 <i class="fab fa-github"></i></a>`;
@@ -389,6 +393,10 @@ function addProjectToGallery(gallery, entry, content) {
     <i class="fas fa-share-alt"></i></a>`;
     // let links = `<button class="icon-button" id="shareLink" data-link="https://felixludos.com/#${gallery}-${entry}">
     // <i class="fas fa-share-alt"></i></button>`;
+    if (info.url) {
+        links += `<a href="${info.url}" target="_blank" class="project-page-icon">
+        <i class="fas fa-globe"></i></a>`;
+    }
     if (info.repo) {
         links += `<a href="https://github.com/${info.repo}" target="_blank" class="card-icon">
         <i class="fab fa-github"></i></a>`;

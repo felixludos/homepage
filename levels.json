@@ -34,6 +34,13 @@
         "icon": "🎉",
         "description": "The project has been completed and is being actively maintained."
     },
+    "accepted": {
+        "title": "Accepted",
+        "background": "#217dbb",
+        "textcolor": "#eee",
+        "icon": "🎉",
+        "description": "The project has been accepted and is being finalized."
+    },
     "published": {
         "title": "Published",
         "background": "#8e44ad",
