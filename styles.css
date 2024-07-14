@@ -32,7 +32,7 @@ pre {
     cursor: pointer;
     border: none;
     background-color: transparent;
-    color: white;
+    color: var(--text-color);
     border-radius: 5px;
     font-size: 12px;
 }
