@@ -26,14 +26,9 @@ The dataset is available on [Kaggle](https://www.kaggle.com/datasets/felixludos/
 ```bibtex
 @inproceedings{leeb2024diverse,
     title = "A diverse Multilingual News Headlines Dataset from around the World",
-    author = {Leeb, Felix  and
-      Sch{\"o}lkopf, Bernhard},
-    editor = "Duh, Kevin  and
-      Gomez, Helena  and
-      Bethard, Steven",
-    booktitle = "Proceedings of the 2024 Conference of the North American Chapter of the 
-    Association for Computational Linguistics: Human Language Technologies 
-    (Volume 2: Short Papers)",
+    author = {Leeb, Felix  and Sch{\"o}lkopf, Bernhard},
+    editor = "Duh, Kevin  and Gomez, Helena  and Bethard, Steven",
+    booktitle = "Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 2: Short Papers)",
     month = jun,
     year = "2024",
     address = "Mexico City, Mexico",
