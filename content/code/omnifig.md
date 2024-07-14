@@ -31,7 +31,7 @@ The package is fully documented on [readthedocs](https://omnifig.readthedocs.io/
 > Journal of Open Source Software, 2024.
 
 ```bibtex
-@article{Leeb2024omnifig, 
+@article{leeb2024omnifig, 
     title = {omni-fig: Unleashing Project Configuration and Organization in Python}, 
     author = {Felix Leeb}, 
     journal = {Journal of Open Source Software} 
