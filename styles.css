@@ -11,6 +11,38 @@ header img {
     max-width: 100%;
 }
 
+pre {
+    font-family: 'Intel One Mono', monospace;
+    overflow-wrap: break-word;
+    /* background-color: var(--footer-bg-color); */
+    border: 1px solid var(--card-border-color);
+    /* transition: box-shadow 0.3s; */
+    /* position: relative; */
+    background-color: var(--card-bg-color);
+    /* rounded corners */
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+.copy-btn {
+    float: right;
+    top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+
+pre, code {
+    white-space: pre-wrap; /* Allows word wrapping within 'pre' and 'code' elements */
+    word-break: break-word; /* Ensures long words can be broken and wrapped to the next line */
+}
+
 nav {
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);

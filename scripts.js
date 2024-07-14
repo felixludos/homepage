@@ -14,6 +14,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
+
 document.addEventListener('DOMContentLoaded', function() {
     fadeInElements.forEach(element => {
         if (isInViewport(element)) {
@@ -72,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             console.log('There was a problem with the fetch operation:', error.message);
         });
+
 });
 
 function loadPage(page) {
@@ -324,7 +326,7 @@ function loadProjectPage(gallery, entry) {
                 contentEl.innerHTML += `<p>[Sorry, there is no content for this project yet.]</p>`;
             }
 
-            MathJax.typesetPromise();
+            // MathJax.typesetPromise();
         
             const shareLinkElements = document.querySelectorAll('.share-link#shareLink');
             shareLinkElements.forEach(function(shareLinkElement) {
@@ -341,6 +343,42 @@ function loadProjectPage(gallery, entry) {
                     });
                 });
             });
+
+            var codeBlocks = document.querySelectorAll('pre code');
+
+            codeBlocks.forEach(function(code) {
+                var button = document.createElement("button");
+                button.className = "copy-btn";
+                // button.textContent = "Copy";
+                // use copy icon
+                button.innerHTML = '<i class="fas fa-copy"></i>';
+                button.onclick = function() {
+                    // Copy text
+                    navigator.clipboard.writeText(code.textContent).then(function() {
+                        // Success action
+                        // button.textContent = 'Copied!';
+                        button.innerHTML = '<i class="fas fa-check"></i>';
+
+                        setTimeout(() => { button.innerHTML = '<i class="fas fa-copy"></i>'; }, 2000);
+                    }, function(err) {
+                        // Error action
+                        button.textContent = 'Failed to copy';
+                        console.error('Error in copying text: ', err);
+                    });
+                };
+
+                var pre = code.parentNode;
+                if (pre.parentNode.classList.contains('code-container')) {
+                    pre.parentNode.insertBefore(button, pre);
+                } else {
+                    var container = document.createElement('div');
+                    container.className = 'code-container';
+                    code.parentNode.insertBefore(container, code);
+                    container.appendChild(button);
+                    container.appendChild(pre);
+                }
+            });
+
         });
 }
 
