@@ -12,12 +12,6 @@ level: published
 status: JOSS
 ---
 
-> [omni-fig: Unleashing Project Configuration and Organization in Python](https://joss.theoj.org/papers/8eb5d7f02686b32f3102a5a03f92f169)
-> 
-> **Felix Leeb**
->
-> Journal of Open Source Software, 9(98), 5350,
-
 [![Unit-Tests](https://github.com/felixludos/omni-fig/actions/workflows/tests.yaml/badge.svg)](https://github.com/felixludos/omni-fig/actions/workflows/tests.yaml) 
 [![Documentation Status](https://readthedocs.org/projects/omnifig/badge/?version=latest)](https://omnifig.readthedocs.io/en/latest/?badge=latest) 
 [![JOSS Status](https://joss.theoj.org/papers/8eb5d7f02686b32f3102a5a03f92f169/status.svg)](https://joss.theoj.org/papers/8eb5d7f02686b32f3102a5a03f92f169)
@@ -26,19 +20,25 @@ status: JOSS
 
 Check out the [highlights](https://omnifig.readthedocs.io/en/latest/highlights.html) for a quick visual overview of the main features.
 
-The package is fully documented on [readthedocs](https://omnifig.readthedocs.io/), and actively maintained (and used) by me on [github](https://github.com/felixludos/omni-fig). Furthermore, the accompanying paper was published in the [Journal of Open Source Software (JOSS)](https://joss.theoj.org/papers/8eb5d7f02686b32f3102a5a03f92f169).
+The package is fully documented on [readthedocs](https://omnifig.readthedocs.io/), and actively maintained (and used) by me on [github](https://github.com/felixludos/omni-fig). Furthermore, the accompanying paper is published in the [Journal of Open Source Software (JOSS)](https://joss.theoj.org/papers/8eb5d7f02686b32f3102a5a03f92f169).
 
 ## Citation
 
+> [omni-fig: Unleashing Project Configuration and Organization in Python](https://joss.theoj.org/papers/8eb5d7f02686b32f3102a5a03f92f169)
+> 
+> **Felix Leeb**
+>
+> Journal of Open Source Software, 2024.
+
 ```bibtex
 @article{Leeb2024omnifig, 
-    doi = {10.21105/joss.05350}, 
-    url = {https://doi.org/10.21105/joss.05350}, 
-    year = {2024}, 
-    publisher = {The Open Journal}, 
-    volume = {9}, number = {98}, pages = {5350}, 
-    author = {Felix Leeb}, 
     title = {omni-fig: Unleashing Project Configuration and Organization in Python}, 
+    author = {Felix Leeb}, 
     journal = {Journal of Open Source Software} 
+    year = {2024}, 
+    volume = {9}, number = {98}, pages = {5350}, 
+    publisher = {The Open Journal}, 
+    url = {https://doi.org/10.21105/joss.05350}, 
+    doi = {10.21105/joss.05350}, 
 }
 ```
