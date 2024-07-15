@@ -47,8 +47,8 @@ code:
       order: 5
     qc_intro:
       order: 6
-    nnn:
-      order: 7
+    # nnn:
+    #   order: 7
     omnibelt:
       order: 8
     omnilearn:

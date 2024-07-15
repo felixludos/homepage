@@ -3,17 +3,12 @@ title: Spatially Resolving the Condensing Effect
 date: 2018-11-02
 arxiv: 1806.02468
 cover: https://images.unsplash.com/photo-1576086476234-1103be98f096?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
+thumbnail: https://images.unsplash.com/photo-1576086476234-1103be98f096?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=480&q=80
 emoji: ☂️
 description: Featured on the cover of the Biophysical Journal
 level: published
 status: Biophysical Journal
 ---
-
-> [Spatially Resolving the Condensing Effect of Cholesterol in Lipid Bilayers](https://www.cell.com/biophysj/fulltext/S0006-3495(18)31213-X) 
-> 
-> **Felix Leeb**, Lutz Maibaum
-> 
-> [[arXiv:1806.02468](https://arxiv.org/abs/1806.02468)]
 
 During my undergrad at the University of Washington, I worked with professor Lutz Maibaum on analyzing the structure of lipid bilayers using molecular dynamics simulations. 
 
@@ -32,3 +27,30 @@ Our results were published in the [Biophysical Journal](https://www.cell.com/bio
         </figcaption>
     </figure>
 </a>
+
+## My Contribution
+
+I was the main author of this work, but worked closely with Lutz Maibaum who provided guidance and expertise in the field of molecular dynamics simulations. I performed the analysis of the simulations, including making the figures and cover, and wrote the first draft of the paper.
+
+## Citation
+
+[Spatially Resolving the Condensing Effect of Cholesterol in Lipid Bilayers](https://www.cell.com/biophysj/fulltext/S0006-3495(18)31213-X) 
+ 
+**Felix Leeb**, Lutz Maibaum
+
+Biophysical Journal, 2018.
+ 
+[[arXiv:1806.02468](https://arxiv.org/abs/1806.02468)]
+
+```bibtex
+@article{leeb2018spatially,
+  title={Spatially resolving the condensing effect of cholesterol in lipid bilayers},
+  author={Leeb, Felix and Maibaum, Lutz},
+  journal={Biophysical journal},
+  volume={115},
+  number={11},
+  pages={2179--2188},
+  year={2018},
+  publisher={Elsevier}
+}
+```

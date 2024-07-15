@@ -3,6 +3,7 @@ title: "DVX: Divide et Impera"
 raw_date: April 2015
 repo: felixludos/Games/tree/main/DVX
 cover: https://images.unsplash.com/photo-1560003987-4282dfd342a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
+thumbnail: https://images.unsplash.com/photo-1560003987-4282dfd342a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=480&q=80
 emoji: ♟
 description: A simple abstract strategy board game
 level: published

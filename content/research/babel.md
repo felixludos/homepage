@@ -3,8 +3,10 @@ title: Babel Briefings
 date: 2023-10-30
 repo: felixludos/babel-briefings
 arxiv: 2403.19352
-url: https://aclanthology.org/2024.naacl-short.55/
+url: https://felixludos.github.io/babel-briefings/
+# url: https://aclanthology.org/2024.naacl-short.55/
 cover: https://images.unsplash.com/photo-1693729016213-99dc29e465de?&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
+thumbnail: https://images.unsplash.com/photo-1693729016213-99dc29e465de?&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=480&q=80
 emoji: 📣
 description: A diverse Multilingual News Headlines Dataset
 level: published
@@ -15,13 +17,19 @@ Babel Briefings is a novel dataset featuring 4.7 million news headlines from Aug
 
 The dataset is available on [Kaggle](https://www.kaggle.com/datasets/felixludos/babel-briefings) and [HuggingFace](https://huggingface.co/datasets/felixludos/babel-briefings). Check out the [project website](https://felixludos.github.io/babel-briefings/) to browse some samples.
 
+## My Contribution
+
+As the main author of this project, I collected and processed the data, designed the dataset, and conducted the analyses. I also wrote the paper and presented the poster at the conference.
+
 ## Citation
 
-> [A diverse Multilingual News Headlines Dataset from around the World](https://aclanthology.org/2024.naacl-short.55/)
->
-> **Felix Leeb**, Bernhard Schölkopf
->
-> Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 2: Short Papers), 2024.
+[A diverse Multilingual News Headlines Dataset from around the World](https://aclanthology.org/2024.naacl-short.55/)
+
+**Felix Leeb**, Bernhard Schölkopf
+
+Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 2: Short Papers), 2024.
+
+[[arXiv:2403.19352](https://arxiv.org/abs/2403.19352)]
 
 ```bibtex
 @inproceedings{leeb2024diverse,

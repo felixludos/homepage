@@ -3,6 +3,7 @@ title: Digital Diplomat
 date: 2022-07-18
 repo: felixludos/digi-diplo
 cover: https://images.unsplash.com/photo-1589639293663-f9399bb41721?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjYzOTIxfQ&w=1440
+thumbnail: https://images.unsplash.com/photo-1589639293663-f9399bb41721?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjYzOTIxfQ&w=480
 emoji: 🎩
 description: Scripts to manage Diplomacy games over Discord
 level: done

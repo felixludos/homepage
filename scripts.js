@@ -407,7 +407,9 @@ function addProjectToGallery(gallery, entry, content) {
 
     // const arxiv = `assets/arxiv.svg`;
 
-    const coverImage = info.cover ? `<div class="card-cover" style="background-image: url('${info.cover}');"></div>` : '';
+    const coverImage = info.thumbnail ? `<div class="card-cover" style="background-image: url('${info.thumbnail}');"></div>` : 
+        (info.cover ? `<div class="card-cover" style="background-image: url('${info.cover}');"></div>` : '');
+    
     const emoji = info.emoji ? `<span>${info.emoji}</span>` : '';
 
     const description = info.description ? `<p class="card-description">${info.description}</p>` : '';
