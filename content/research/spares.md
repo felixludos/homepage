@@ -16,8 +16,6 @@ In this paper, we take a closer look at the condensing effect, which is the phen
 
 Our results were published in the [Biophysical Journal](https://www.cell.com/biophysj/fulltext/S0006-3495(18)31213-X), and a visualization of one of our simulations was used for the cover of the December 2018 issue seen below.
 
-<!-- [![Cover of the Biophysical Journal December 2018 Issue](https://www.cell.com/cms/asset/atypon:cms:attachment:img:d707e6:rev:1543631346976-30454:pii:S0006349517X00246/cover.tif.jpg)](https://www.cell.com/biophysj/issue?pii=S0006-3495(17)X0024-6#) -->
-
 
 <a href="https://www.cell.com/biophysj/issue?pii=S0006-3495(17)X0024-6#">
     <figure>
