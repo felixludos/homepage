@@ -214,6 +214,34 @@ async function loadGallery(gallery) {
     });
 }
 
+const startFlag = "<!-- begin-content-flag -->";
+const endFlag = "<!-- end-content-flag -->";
+
+async function loadGithubMarkdownFile(filepath) {
+    try {
+        const response = await fetch(`https://raw.githubusercontent.com/${filepath}`);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        
+        const markdownText = await response.text();
+  
+        // Extract the section between the flags
+        const startIndex = markdownText.indexOf(startFlag);
+        const endIndex = markdownText.indexOf(endFlag, startIndex);
+        if (startIndex === -1 || endIndex === -1) {
+          throw new Error("Content flags not found in the Markdown file.");
+        }
+        
+        const section = markdownText.slice(
+          startIndex + startFlag.length,
+          endIndex
+        ).trim();
+        
+        return marked.parse(section);
+      } catch (error) {
+        console.error("Error loading Markdown:", error);
+      }
+}
+
 function loadProjectPage(gallery, entry) {
     // const info = window.siteStructure[gallery].posts[entry];
     fetchProjectContent(gallery, entry)
@@ -317,11 +345,22 @@ function loadProjectPage(gallery, entry) {
 
             if (markdownContent) {
                 const format_type = `project-format-${(info.format || 'default')}`;
-                const raw_content = marked(markdownContent);
+                let raw_content = marked(markdownContent);
 
                 const content = `<div class="${format_type}" id="markdown-container">${raw_content}</div>`;
 
                 contentEl.innerHTML += content;
+                
+                if (info.markdown) {
+                    loadGithubMarkdownFile(info.markdown).then(content => {
+                        // console.log(content);
+                        const markdownContainer = document.getElementById('markdown-container');
+                        if (markdownContainer) {
+                            markdownContainer.innerHTML += content;
+                        }
+                    });
+                }
+
             } else {
                 contentEl.innerHTML += `<p>[Sorry, there is no content for this project yet.]</p>`;
             }
