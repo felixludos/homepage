@@ -356,7 +356,7 @@ function loadProjectPage(gallery, entry) {
                         // console.log(content);
                         const markdownContainer = document.getElementById('markdown-container');
                         if (markdownContainer) {
-                            markdownContainer.innerHTML += content;
+                            markdownContainer.innerHTML = markdownContainer.innerHTML.replace(/\{markdown-content\}/g, content);
                         }
                     });
                 }
