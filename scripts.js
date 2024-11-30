@@ -345,7 +345,7 @@ function loadProjectPage(gallery, entry) {
 
             if (markdownContent) {
                 const format_type = `project-format-${(info.format || 'default')}`;
-                let raw_content = marked(markdownContent);
+                const raw_content = marked(markdownContent);
 
                 const content = `<div class="${format_type}" id="markdown-container">${raw_content}</div>`;
 
