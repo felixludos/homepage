@@ -18,4 +18,6 @@ Although it can be played over the table, **Mystic Dialogue** is best played onl
 
 {markdown-content}
 
+---
+
 For reference, the rules are also available [here](https://github.com/felixludos/Games). If you have questions or suggestions, please open an issue on the repository!
