@@ -7,8 +7,11 @@ thumbnail: https://images.unsplash.com/photo-1612521564730-62fc7691cd85?ixlib=rb
 emoji: 🧬
 description: A quick negotiation card game great for parties
 level: done
+markdown: felixludos/Games/main/Polymer/Polymer.md
 ---
 
-A casual social negotiation game for 5-15 players created in September 2023.
+<!-- A casual social negotiation game for 5-15 players created in September 2023. -->
 
-Here are the [rules](https://github.com/felixludos/Games/blob/main/Polymer/Polymer.md).
+{markdown-content}
+
+For reference, the rules are also available [here](https://github.com/felixludos/Games). If you have questions or suggestions, please open an issue on the repository!
