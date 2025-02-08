@@ -183,7 +183,7 @@ async function loadGallery(gallery) {
         if (!entryA.order || !entryB.order) {
             return a.localeCompare(b);
         }
-        return entryA.order - entryB.order;
+        return entryB.order - entryA.order;
     });
 
     const promises = sortedKeys.map(key => {

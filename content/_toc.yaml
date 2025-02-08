@@ -4,16 +4,18 @@ research:
   # cover: https://images.unsplash.com/flagged/photo-1579268351234-073f85929562?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
   cover: https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
   posts:
-    calm:
-      order: 1
+    icon:
+      order: 12
     reasoning:
-      order: 2
+      order: 11
+    calm:
+      order: 10
     # rys:
     #   order: 1
     babel:
-      order: 3
+      order: 8
     cladder:
-      order: 4
+      order: 7
     latent_responses:
       order: 6
     sae:
@@ -21,11 +23,11 @@ research:
     # intervconsis:
     #   order: 3
     motionnets:
-      order: 8
+      order: 3
     se3posenets:
-      order: 9
+      order: 2
     spares:
-      order: 10
+      order: 1
 
 code:
   type: gallery
@@ -36,27 +38,27 @@ code:
   cover: https://images.unsplash.com/photo-1586094332115-680788e0182f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
   posts:
     omnifig:
-      order: 1
+      order: 10
     omniply:
-      order: 2
+      order: 9
     omnicite:
-      order: 3
+      order: 8
     homepage:
-      order: 4
+      order: 7
     mpi_cluster:
-      order: 5
-    qc_intro:
       order: 6
+    qc_intro:
+      order: 5
     # nnn:
     #   order: 7
     omnibelt:
-      order: 8
+      order: 4
     omnilearn:
-      order: 9
+      order: 3
     digi_diplo:
-      order: 10
+      order: 2
     ludos:
-      order: 11
+      order: 1
     # omnicrypt:
     #   order: 10
 
@@ -68,23 +70,23 @@ games:
   cover: https://images.unsplash.com/photo-1560279781-289c6a25cbe9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
   posts:
     aristocracy:
-      order: 0
+      order: 8
     jaccuse:
-      order: 1
+      order: 7
     alhonneur:
-      order: 2
+      order: 6
     polymer:
-      order: 3
+      order: 5
     mystic:
       order: 4
     unwise:
-      order: 5
+      order: 3
     dvx:
-      order: 6
+      order: 2
     # lords:
-    #   order: 7
+    #   order: 1
     # eu_conquest:
-    #   order: 7
+    #   order: 1
 
 essays:
   type: gallery
@@ -95,14 +97,14 @@ essays:
   cover: https://images.unsplash.com/photo-1606247357835-d27fe83fc6a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
   posts:
     aeiou:
-      order: 0
+      order: 6
     pragmatism:
-      order: 1
+      order: 5
     apocalypse:
-      order: 2
+      order: 4
     agency:
       order: 3
     debates:
-      order: 4
+      order: 2
     fake_news:
-      order: 5
+      order: 1
