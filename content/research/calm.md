@@ -6,7 +6,7 @@ cover: https://plus.unsplash.com/premium_photo-1670029017881-c4e73ec0827c?ixlib=
 thumbnail: https://plus.unsplash.com/premium_photo-1670029017881-c4e73ec0827c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=480&q=80
 emoji: 💖
 description: I organized a workshop on the many interesting synergies between causality and large models
-level: accepted
+level: past
 status: NeurIPS 2024
 ---
 

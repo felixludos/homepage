@@ -48,6 +48,13 @@
         "icon": "🔖",
         "description": "The project has been published in an official capacity, and is being actively maintained."
     },
+    "past": {
+        "title": "Completed",
+        "background": "#8e44ad",
+        "textcolor": "#eee",
+        "icon": "🔖",
+        "description": "The project has been successfully completed."
+    },
     "archived": {
         "title": "Archived",
         "background": "#5D4037",
