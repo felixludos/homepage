@@ -9,12 +9,17 @@ description: A devilishly tricky social deduction card game
 level: draft
 status: Playable
 status_icon: 🌟
+markdown: felixludos/Games/main/JAccuse/JAccuse.md
 ---
 
 This devilishly tricky social deduction card game for 5-12 players (best with 6-8) was created with my colleagues in early 2023. Special thanks to Chinglam and Clemens for their help in refining the game!
 
 The game requires two decks of regular playing cards, and a pile of fungible tokens to keep track of experience points.
 
-Check out the full rules [here](https://github.com/felixludos/Games/blob/main/J'Accuse/J'Accuse.md).
+{markdown-content}
+
+---
+
+For reference, the rules are also available [here](https://github.com/felixludos/Games). If you have questions or suggestions, please open an issue on the repository!
 
 
