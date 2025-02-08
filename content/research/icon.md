@@ -8,7 +8,7 @@ thumbnail: https://images.unsplash.com/photo-1602640574426-a04ba466e300?ixlib=rb
 # emoji: 🕺
 emoji: 🪇
 description: Multimodal representations with minimal supervision
-level: flux
+level: review
 ---
 
 
