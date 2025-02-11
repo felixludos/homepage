@@ -12,9 +12,7 @@ status_icon: 🌟
 markdown: felixludos/Games/main/JAccuse/JAccuse.md
 ---
 
-This devilishly tricky social deduction card game for 5-12 players (best with 6-8) was created with my colleagues in early 2023. Special thanks to Chinglam and Clemens for their help in refining the game!
-
-The game requires two decks of regular playing cards, and a pile of fungible tokens to keep track of experience points.
+This devilishly tricky social deduction card game for 5-12 players (best with 6-8) was created with my colleagues in early 2023. The game somewhat resembles the popular game of [Mafia](https://en.wikipedia.org/wiki/Mafia_(party_game)) or [Secret Hitler](https://www.secrethitler.com/), however, the dynamics are considerably more complex in large part because of rapidly changing allegiances and multiple paths to victory. Special thanks to Ching Lam and Clemens for their help in refining the game!
 
 {markdown-content}
 
