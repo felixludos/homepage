@@ -50,11 +50,77 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
 
-    fetch('levels.json')
-        .then(response => response.json())
-        .then(levels => {
-            window.levels = levels;
-        });
+    // fetch('levels.json')
+    //     .then(response => response.json())
+    //     .then(levels => {
+    //         window.levels = levels;
+    //     });
+
+    window.levels = {
+        "idea": {
+            "title": "Idea",
+            "background": "#c0392b",
+            "textcolor": "#eee",
+            "icon": "💡",
+            "description": "This is an initial announcement, but the project is not yet ready for the public. Stay tuned for updates!"
+        },
+        "review": {
+            "title": "Under Review",
+            "background": "#d35400",
+            "textcolor": "#eee",
+            "icon": "🔎",
+            "description": "The project is under review, and may be subject to change. Stay tuned for updates!"
+        },
+        "flux": {
+            "title": "Developing",
+            "background": "#c7a600",
+            "textcolor": "#eee",
+            "icon": "🎬",
+            "description": "There's a sneak peek available, but the project is still under development, so expect changes!"
+        },
+        "draft": {
+            "title": "Functional",
+            "background": "#27ae60",
+            "textcolor": "#eee",
+            "icon": "📝",
+            "description": "An rough version of the main contribution is public, but some parts still need refining."
+        },
+        "done": {
+            "title": "Completed",
+            "background": "#217dbb",
+            "textcolor": "#eee",
+            "icon": "🎉",
+            "description": "The project has been completed and is being actively maintained."
+        },
+        "accepted": {
+            "title": "Accepted",
+            "background": "#217dbb",
+            "textcolor": "#eee",
+            "icon": "🎉",
+            "description": "The project has been accepted and is being finalized."
+        },
+        "published": {
+            "title": "Published",
+            "background": "#8e44ad",
+            "textcolor": "#eee",
+            "icon": "🔖",
+            "description": "The project has been published in an official capacity, and is being actively maintained."
+        },
+        "past": {
+            "title": "Completed",
+            "background": "#8e44ad",
+            "textcolor": "#eee",
+            "icon": "🔖",
+            "description": "The project has been successfully completed."
+        },
+        "archived": {
+            "title": "Archived",
+            "background": "#5D4037",
+            "textcolor": "#eee",
+            "icon": "💤",
+            "description": "The project is no longer being maintained, but is still available for reference."
+        }
+    };
 
     fetch('content/_toc.yaml')
         .then(response => {
@@ -102,6 +168,44 @@ function loadPage(page) {
     }
 }
 
+const GREETINGS = [
+    "Hello",
+    "Hallo",
+    "Hola",
+
+    "வணக்கம்",
+    "ഹലോ",
+
+    "ជំរាបសួរ",
+    "안녕",
+
+    "Bonjour",
+    "Ciao",
+    "Aloha",
+    // "Olá", // portuguese
+
+    "Hej",
+    "Hei",
+    "Tere",
+    "Привет",
+    "Сәлам",
+    "Сайн уу",
+    "你好",
+    "こんにちは",
+
+    "Szia",
+    "Ahoj",
+    "Grüezi",
+
+    "مرحبا",
+    "ሰላም",
+    "Jambo",
+    "Muraho",
+
+    "Xin chào",
+    "Kumusta"
+];
+
 function loadHomePage() {
     console.log(`defaulting to home page`);
 
@@ -109,21 +213,10 @@ function loadHomePage() {
     const coverimage = info.cover ? info.cover : 'assets/ideal_city.jpg';
     document.getElementById('project-header').style.backgroundImage = `url('${coverimage}')`;
 
-    // Fetch the greetings and sample a single random greeting
-    fetch('greetings.json')
-        .then(response => response.json())
-        .then(greetings => {
-            if (!greetings || !Array.isArray(greetings) || greetings.length === 0) {
-                console.error("Invalid greetings data");
-                return;
-            }
+        const randomGreeting = GREETINGS[Math.floor(Math.random() * GREETINGS.length)];
 
-            const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-            // Load the home page markdown content and replace the pattern
-            loadSimplePageWithGreeting('home', randomGreeting); // Assuming 'home' is the name of the home page in your site structure
-        })
-        .catch(error => console.error('Error fetching greetings:', error));
+        // Load the home page markdown content and replace the pattern
+        loadSimplePageWithGreeting('home', randomGreeting); // Assuming 'home' is the name of the home page in your site structure
 }
 
 function loadSimplePageWithGreeting(page, greeting) {
