@@ -18,6 +18,6 @@ This devilishly tricky social deduction card game for 5-12 players (best with 6-
 
 ---
 
-For reference, the rules are also available [here](https://github.com/felixludos/Games). If you have questions or suggestions, please open an issue on the repository!
+For reference, the rules are also available [here](https://github.com/felixludos/Games/blob/main/JAccuse/JAccuse.md). If you have questions or suggestions, please open an issue on the repository!
 
 
