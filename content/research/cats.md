@@ -1,6 +1,6 @@
 ---
 title: Fight monsters with CATs
-date: 2025-02-08
+date: 2025-05-22
 cover: https://images.unsplash.com/photo-1500259571355-332da5cb07aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
 thumbnail: https://images.unsplash.com/photo-1500259571355-332da5cb07aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=480&q=80
 # cover: https://images.unsplash.com/photo-1663814320358-3c074ab67c9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
