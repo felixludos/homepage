@@ -3,11 +3,15 @@ title: Alignment by Consistency
 date: 2025-01-30
 # cover: https://images.unsplash.com/photo-1500259571355-332da5cb07aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
 # thumbnail: https://images.unsplash.com/photo-1500259571355-332da5cb07aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=480&q=80
-cover: https://images.unsplash.com/photo-1602640574426-a04ba466e300?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
-thumbnail: https://images.unsplash.com/photo-1602640574426-a04ba466e300?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=480&q=80
+# cover: https://images.unsplash.com/photo-1602640574426-a04ba466e300?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
+# thumbnail: https://images.unsplash.com/photo-1602640574426-a04ba466e300?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=480&q=80
+# https://images.unsplash.com/photo-1550008048-79f06a04a08b?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+# https://images.unsplash.com/photo-1693069050121-835c07962a17?q=80&w=3878&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+cover: https://images.unsplash.com/photo-1693069050121-835c07962a17?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
+thumbnail: https://images.unsplash.com/photo-1693069050121-835c07962a17?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=480&q=80
 url: https://openreview.net/forum?id=eimAJqoIWt&noteId=eimAJqoIWt
 # emoji: 🕺
-emoji: 🪇
+emoji: 💬
 description: Multimodal representations with minimal supervision
 level: published
 status: ICLR 2025 Workshop
