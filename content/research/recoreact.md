@@ -1,6 +1,6 @@
 ---
 title: Do as I say, not as I do
-date: 2025-05-19
+date: 2025-09-11
 cover: https://images.unsplash.com/photo-1728318611239-664f04b21635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
 thumbnail: https://images.unsplash.com/photo-1728318611239-664f04b21635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=480&q=80
 emoji: 💬
