@@ -85,6 +85,13 @@ document.addEventListener('DOMContentLoaded', function() {
             "icon": "📝",
             "description": "An rough version of the main contribution is public, but some parts still need refining."
         },
+        "preview": {
+            "title": "Preview",
+            "background": "#27ae60",
+            "textcolor": "#eee",
+            "icon": "📝",
+            "description": "An draft version of the main contribution is public, but some parts still need refining."
+        },
         "done": {
             "title": "Completed",
             "background": "#217dbb",
