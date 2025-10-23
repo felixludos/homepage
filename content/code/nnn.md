@@ -1,5 +1,5 @@
 ---
-title: No Nonsense News
+title: Babel Briefings Demo
 date: 2020-08-09
 repo: felixludos/nnn
 cover: https://images.unsplash.com/photo-1602303885393-4be251de62c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80
@@ -9,11 +9,11 @@ description: Scripts for scraping and translating world news using the News API
 level: archived
 ---
 
-> See the final product: [No Nonsense News Headlines](http://nnn.felixludos.com)
+> See the final product: [Babel Briefings Demo](https://www.notion.so/felixludos/a3f6eb244397478a9c9ac1d8c7b1babb?v=8948c08d08d44b39be52ec513618016a)
 
 Never before have we had access to so much information from all over the world. However, from a pessimistic perspective, this also means that we are bombarded with misleading or false information more than ever. This project serves not to filter information but to present and organize as much information as possible in a reasonably digestible manner without any additional editorializing, monetizing, or other distortions.
 
-To that end, I present **No-Nonsense-News**, a simple set of python scripts to (1) scrape news headlines from all over the world using [News API](https://newsapi.org/), (2) translate them with the [Helsinki-NLP](https://blogs.helsinki.fi/language-technology/) [Marian](https://marian-nmt.github.io/) machine translation models (using [HuggingFace](https://huggingface.co/)), and then (3) display them on a [Notion](https://www.notion.so/) page.
+To that end, I present **Babel Briefings Demo**, a simple set of python scripts to (1) scrape news headlines from all over the world using [News API](https://newsapi.org/), (2) translate them with the [Helsinki-NLP](https://blogs.helsinki.fi/language-technology/) [Marian](https://marian-nmt.github.io/) machine translation models (using [HuggingFace](https://huggingface.co/)), and then (3) display them on a [Notion](https://www.notion.so/) page.
 
 1. Scraping - [News API](https://newsapi.org/) enables users to download headline news articles from 56 countries all over the world for free. Each entry contains exactly the right information to be displayed to get a good idea of what the article is about (title, description, image) and a link to the full article. Additionally, articles can be grouped into seven different categories according to the subject matter: general, business, science, technology, health, entertainment, and sports.
 2. Formatting/Translating - Since these articles are from around the world, most are probably in a language foreign to you. In this step, all articles are translated into English (or any language, depending on what's available) using pre-trained machine translation models provided by [Helsinki-NLP](https://blogs.helsinki.fi/language-technology/) through the [HuggingFace](https://huggingface.co/) package.
